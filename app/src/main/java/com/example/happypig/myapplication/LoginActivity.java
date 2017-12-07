@@ -1,5 +1,6 @@
 package com.example.happypig.myapplication;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -67,16 +68,18 @@ public class LoginActivity extends AppCompatActivity {
 
         String strStatusID = "0";
 
-        System.out.println(resultServer);
         try {
             c = new JSONObject(resultServer);
             strStatusID = c.getString("StatusID");
-            System.out.println(strStatusID);
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-
+        //ChangePage
+        if(strStatusID.equals("1")) {
+            Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
+            startActivity(intentdoor);
+        }
 
     }
 
