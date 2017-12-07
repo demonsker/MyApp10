@@ -45,14 +45,14 @@
             android:id="@+id/textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_above="@+id/username"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="14dp"
             android:gravity="center"
             android:text="เข้าสู่ระบบ"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_below="@+id/textInputLayout"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="40dp" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/username"
@@ -71,9 +71,9 @@
             android:id="@+id/password_login"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/register_Button"
-            android:layout_alignEnd="@+id/goto_login_Button"
-            android:layout_alignStart="@+id/register_Button"
+            android:layout_above="@+id/login_Button"
+            android:layout_alignEnd="@+id/goto_Register_Button"
+            android:layout_alignStart="@+id/login_Button"
             android:layout_marginBottom="28dp"
             android:ems="10"
             android:hint="@string/prompt_password"
@@ -81,7 +81,7 @@
             android:textSize="20sp" />
 
         <Button
-            android:id="@+id/register_Button"
+            android:id="@+id/login_Button"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:layout_alignParentStart="true"
@@ -89,19 +89,20 @@
             android:layout_marginStart="34dp"
             android:background="#024d4a"
             android:backgroundTint="#024d4a"
+            android:onClick="loginClick"
             android:text="เข้าสู่ระบบ"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/goto_login_Button"
+            android:id="@+id/goto_Register_Button"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_alignBaseline="@+id/register_Button"
-            android:layout_alignBottom="@+id/register_Button"
+            android:layout_alignBaseline="@+id/login_Button"
+            android:layout_alignBottom="@+id/login_Button"
             android:layout_marginStart="24dp"
-            android:layout_toEndOf="@+id/register_Button"
+            android:layout_toEndOf="@+id/login_Button"
             android:background="#828282"
             android:backgroundTint="#828282"
             android:text="สมัครสมาชิก"
@@ -113,8 +114,8 @@
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/register_Button"
-            android:layout_below="@+id/register_Button"
+            android:layout_alignStart="@+id/login_Button"
+            android:layout_below="@+id/login_Button"
             android:layout_marginTop="11dp"
             android:text="ลืมรหัสผ่าน?"
             android:textColor="#0000FF"

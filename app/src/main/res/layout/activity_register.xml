@@ -126,16 +126,16 @@
             android:id="@+id/PIN"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_above="@+id/register_Button"
-            android:layout_alignEnd="@+id/goto_login_Button"
-            android:layout_alignStart="@+id/register_Button"
+            android:layout_above="@+id/login_Button"
+            android:layout_alignEnd="@+id/goto_Register_Button"
+            android:layout_alignStart="@+id/login_Button"
             android:layout_marginBottom="32dp"
             android:ems="10"
             android:hint="@string/prompt_PIN"
             android:inputType="number" />
 
         <Button
-            android:id="@+id/register_Button"
+            android:id="@+id/login_Button"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:layout_marginStart="13dp"
@@ -149,13 +149,13 @@
             android:layout_alignParentStart="true" />
 
         <Button
-            android:id="@+id/goto_login_Button"
+            android:id="@+id/goto_Register_Button"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_alignBaseline="@+id/register_Button"
-            android:layout_alignBottom="@+id/register_Button"
+            android:layout_alignBaseline="@+id/login_Button"
+            android:layout_alignBottom="@+id/login_Button"
             android:layout_marginStart="14dp"
-            android:layout_toEndOf="@+id/register_Button"
+            android:layout_toEndOf="@+id/login_Button"
             android:background="#828282"
             android:backgroundTint="#828282"
             android:text="เข้าสู่ระบบ"
