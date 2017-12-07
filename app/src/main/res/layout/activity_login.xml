@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.happypig.myapplication.LoginActivity">
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="center_vertical">
+
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/colorPrimary"
+            android:minHeight="?attr/actionBarSize"
+            android:theme="?attr/actionBarTheme" />
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/textInputLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/toolbar">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textInputLayout">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="เข้าสู่ระบบ"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_below="@+id/textInputLayout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="40dp" />
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/password_login"
+            android:layout_alignEnd="@+id/password_login"
+            android:layout_alignStart="@+id/password_login"
+            android:layout_marginBottom="7dp"
+            android:ems="10"
+            android:hint="@string/prompt_username"
+            android:inputType="textEmailAddress|textPersonName"
+            android:textSize="20sp" />
+
+        <EditText
+            android:id="@+id/password_login"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/register_Button"
+            android:layout_alignEnd="@+id/goto_login_Button"
+            android:layout_alignStart="@+id/register_Button"
+            android:layout_marginBottom="28dp"
+            android:ems="10"
+            android:hint="@string/prompt_password"
+            android:inputType="textPassword"
+            android:textSize="20sp" />
+
+        <Button
+            android:id="@+id/register_Button"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_alignParentStart="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="34dp"
+            android:background="#024d4a"
+            android:backgroundTint="#024d4a"
+            android:text="เข้าสู่ระบบ"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/goto_login_Button"
+            android:layout_width="160dp"
+            android:layout_height="50dp"
+            android:layout_alignBaseline="@+id/register_Button"
+            android:layout_alignBottom="@+id/register_Button"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@+id/register_Button"
+            android:background="#828282"
+            android:backgroundTint="#828282"
+            android:text="สมัครสมาชิก"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignStart="@+id/register_Button"
+            android:layout_below="@+id/register_Button"
+            android:layout_marginTop="11dp"
+            android:text="ลืมรหัสผ่าน?"
+            android:textColor="#0000FF"
+            android:textSize="18sp" />
+
+    </RelativeLayout>
+
+</android.support.design.widget.CoordinatorLayout>

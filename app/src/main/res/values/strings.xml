@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">Happy Pigsty</string>
+
+    //log in page
+    <string name="prompt_username">ชื่อฟาร์ม</string>
+    <string name="prompt_password">รหัสผ่าน</string>
+
+    //Register page
+    <string name="prompt_FarmName">ชื่อฟาร์ม</string>
+    <string name="prompt_Tell">เบอร์โทร</string>
+    <string name="prompt_Email">E-mail</string>
+    <string name="prompt_Password">รหัสผ่าน</string>
+    <string name="prompt_ConfirmPassword">ยืนยันรหัสผ่าน</string>
+    <string name="prompt_PIN">PIN</string>
+    <string name="prompt_Address">ที่อยู่</string>
+
+
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_register">RegisterActivity</string>
+    <string name="title_activity_pin">PINActivity</string>
+    <string name="title_activity_main">Happy Pigsty</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="title_activity_main2">Main2Activity</string>
+
+
+</resources>
