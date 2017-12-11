@@ -2,6 +2,8 @@ package com.example.happypig.myapplication.Utilities;
 
 import android.util.Log;
 
+import com.example.happypig.myapplication.models.Farm;
+
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
 import org.apache.http.NameValuePair;
@@ -49,25 +51,25 @@ public class DBHandler {
             return 0;
     }
 
-    public  int selectFarm(List<NameValuePair> params) {
+    public Farm selectFarm(List<NameValuePair> params) {
         String url = "http://192.168.1.5/login.php";
 
         String resultServer = getHttpPost(url, params);
         JSONObject c;
-
-        String strStatusID = "0";
+        Farm farm = new Farm();
 
         try {
             c = new JSONObject(resultServer);
-            strStatusID = c.getString("StatusID");
+            farm.setId(c.getString("id"));
+            farm.setName(c.getString("name"));
+            farm.setTel(c.getString("tel"));
+            farm.setPassword(c.getString("password"));
+            farm.setPinOwn(c.getString("pinOwn"));
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        if (strStatusID.equals("1"))
-            return 1;
-        else
-            return 0;
+        return farm;
     }
 
     public String getHttpPost(String url,List<NameValuePair> params) {
