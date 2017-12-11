@@ -63,6 +63,7 @@ public class DBHandler {
             farm.setId(c.getString("id"));
             farm.setName(c.getString("name"));
             farm.setTel(c.getString("tel"));
+            farm.setEmail(c.getString("email"));
             farm.setPassword(c.getString("password"));
             farm.setPinOwn(c.getString("pinOwn"));
         } catch (JSONException e) {
