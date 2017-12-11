@@ -49,6 +49,27 @@ public class DBHandler {
             return 0;
     }
 
+    public  int selectFarm(List<NameValuePair> params) {
+        String url = "http://192.168.1.5/login.php";
+
+        String resultServer = getHttpPost(url, params);
+        JSONObject c;
+
+        String strStatusID = "0";
+
+        try {
+            c = new JSONObject(resultServer);
+            strStatusID = c.getString("StatusID");
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        if (strStatusID.equals("1"))
+            return 1;
+        else
+            return 0;
+    }
+
     public String getHttpPost(String url,List<NameValuePair> params) {
         StringBuilder str = new StringBuilder();
         HttpClient client = new DefaultHttpClient();
