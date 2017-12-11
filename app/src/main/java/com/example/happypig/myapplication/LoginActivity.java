@@ -56,9 +56,15 @@ public class LoginActivity extends AppCompatActivity {
 
     }
 
+    public  void  gotoRegisterClick (View v)
+    {
+        Intent intentdoor = new Intent(getBaseContext(), RegisterActivity.class);
+        startActivity(intentdoor);
+    }
+
     public void loginClick (View v)
     {
-        String url = "http://192.168.1.5/login.php";
+       /* String url = "http://192.168.1.5/login.php";
         List<NameValuePair> params = new ArrayList<NameValuePair>();
         params.add(new BasicNameValuePair("strUser", userName.getText().toString()));
         params.add(new BasicNameValuePair("strPass", password.getText().toString()));
@@ -76,10 +82,10 @@ public class LoginActivity extends AppCompatActivity {
         }
 
         //ChangePage
-        if(strStatusID.equals("1")) {
+        if(strStatusID.equals("1")) {*/
             Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
             startActivity(intentdoor);
-        }
+        //}
 
     }
 

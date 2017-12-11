@@ -28,26 +28,29 @@
             android:id="@+id/PINpassword"
             android:layout_width="340dp"
             android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="184dp"
+            android:layout_marginTop="119dp"
+            android:gravity="center"
+            android:hint="@string/prompt_pinOwn"
             android:ems="10"
             android:inputType="numberPassword"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:layout_below="@+id/textView3"
+            android:layout_centerHorizontal="true" />
 
         <Button
             android:id="@+id/ok_Button"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_alignStart="@+id/PINpassword"
-            android:layout_below="@+id/PINpassword"
-            android:layout_marginTop="20dp"
+            android:layout_marginTop="34dp"
             android:background="#024d4a"
             android:backgroundTint="#024d4a"
+            android:onClick="enterPinClick"
             android:text="ตกลง"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/PINpassword"
+            android:layout_alignStart="@+id/PINpassword" />
 
         <Button
             android:id="@+id/skip_Button"
@@ -58,10 +61,23 @@
             android:layout_alignEnd="@+id/PINpassword"
             android:background="#828282"
             android:backgroundTint="#828282"
+            android:onClick="skipClick"
             android:text="ข้าม"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="116dp"
+            android:text="ยินดีต้อนรับสู่ ไกยชาติฟาร์ม"
+            android:textColor="#000000"
+            android:textSize="25sp"
+            android:textStyle="bold"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true" />
 
     </RelativeLayout>
 
