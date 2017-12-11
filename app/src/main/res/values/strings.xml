@@ -1,5 +1,10 @@
 <resources>
     <string name="app_name">Happy Pigsty</string>
+    <string name="title_activity_register">Happy Pigsty</string>
+    <string name="title_activity_pin">Happy Pigsty</string>
+    <string name="title_activity_main">Happy Pigsty</string>
+    <string name="title_activity_add"></string>
+    <string name="title_activity_sub__main">Happy Pigsty</string>
 
     //log in page
     <string name="prompt_username">ชื่อฟาร์ม</string>
@@ -7,22 +12,40 @@
 
     //Register page
     <string name="prompt_FarmName">ชื่อฟาร์ม</string>
-    <string name="prompt_Tell">เบอร์โทร</string>
+    <string name="prompt_Tell">หมายเลขโทรศัพท์</string>
     <string name="prompt_Email">E-mail</string>
     <string name="prompt_Password">รหัสผ่าน</string>
     <string name="prompt_ConfirmPassword">ยืนยันรหัสผ่าน</string>
     <string name="prompt_PIN">PIN</string>
     <string name="prompt_Address">ที่อยู่</string>
 
+    //Enter PIN
+    <string name="prompt_pinOwn">ใส่ PIN</string>
+
+    //Add
+    <string-array name="chocolate">
+
+        <item>เลือกโรงเรือน</item>
+        <item>Crackles</item>
+        <item>Fruit and Nut</item>
+        <item>Dairy milk silk</item>
+
+    </string-array>
+
 
     <string name="action_settings">Settings</string>
-    <string name="title_activity_register">RegisterActivity</string>
-    <string name="title_activity_pin">PINActivity</string>
-    <string name="title_activity_main">Happy Pigsty</string>
-    <string name="title_home">Home</string>
+
+    <string name="title_home">หน้าหลัก</string>
+    <string name="title_finance">การเงิน</string>
+    <string name="title_notifications">แจ้งเตือน</string>
+    <string name="title_activity_main22">Happy Pigsty</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
     <string name="title_dashboard">Dashboard</string>
-    <string name="title_notifications">Notifications</string>
-    <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_content">content</string>
+    <string name="title_activity_pigsty_food_">Pigsty_food_Activity</string>
+    <string name="title_activity_pigsty__enviroment">Pigsty_EnviromentActivity</string>
+    <string name="title_activity_regis">RegisActivity</string>
 
 
 </resources>
