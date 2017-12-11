@@ -18,6 +18,20 @@ public class Farm {
 
     private String pinOwn;
 
+    public Farm(String id,
+                String name,
+                String tel,
+                String email,
+                String password,
+                String pinOwn) {
+        this.id = id;
+        this.name = name;
+        this.tel = tel;
+        this.email = email;
+        this.password = password;
+        this.pinOwn = pinOwn;
+    }
+
     public String getId() {
         return id;
     }

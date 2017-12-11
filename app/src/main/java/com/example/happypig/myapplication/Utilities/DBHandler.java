@@ -1,6 +1,7 @@
 package com.example.happypig.myapplication.Utilities;
 
 import android.util.Log;
+import com.example.happypig.myapplication.models.Farm;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -28,16 +29,16 @@ import java.util.List;
 
 public class DBHandler {
 
-    public  int insertFarm(){
+    public  int insertFarm(Farm farm){
         String url = "http://192.168.1.5/register.php";
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
-        params.add(new BasicNameValuePair("farmId", "1"));
-        params.add(new BasicNameValuePair("farmName", farmName.getText().toString()));
-        params.add(new BasicNameValuePair("tell", tell.getText().toString()));
-        params.add(new BasicNameValuePair("email", email.getText().toString()));
-        params.add(new BasicNameValuePair("password", password.getText().toString()));
-        params.add(new BasicNameValuePair("pinOwn", pin.getText().toString()));
+        params.add(new BasicNameValuePair("farmId", farm.getId()));
+        params.add(new BasicNameValuePair("farmName", farm.getName()));
+        params.add(new BasicNameValuePair("tell", farm.getTel()));
+        params.add(new BasicNameValuePair("email", farm.getEmail()));
+        params.add(new BasicNameValuePair("password", farm.getPassword()));
+        params.add(new BasicNameValuePair("pinOwn", farm.getPinOwn()));
 
         String resultServer  = getHttpPost(url,params);
         JSONObject c;
@@ -63,28 +64,31 @@ public class DBHandler {
         HttpPost httpPost = new HttpPost(url);
 
         try {
-            httpPost.setEntity(new UrlEncodedFormEntity(params));
-            HttpResponse response = client.execute(httpPost);
-            StatusLine statusLine = response.getStatusLine();
-            int statusCode = statusLine.getStatusCode();
-            if (statusCode == 200) { // Status OK
-                HttpEntity entity = response.getEntity();
-                InputStream content = entity.getContent();
-                BufferedReader reader = new BufferedReader(new InputStreamReader(content));
-                String line;
-                while ((line = reader.readLine()) != null) {
-                    str.append(line);
+                httpPost.setEntity(new UrlEncodedFormEntity(params));
+                HttpResponse response = client.execute(httpPost);
+                StatusLine statusLine = response.getStatusLine();
+                int statusCode = statusLine.getStatusCode();
+                if (statusCode == 200) {
+                    HttpEntity entity = response.getEntity();
+                    InputStream content = entity.getContent();
+                    BufferedReader reader = new BufferedReader(new InputStreamReader(content));
+                    String line;
+                    while ((line = reader.readLine()) != null) {
+                        str.append(line);
+                    }
                 }
-            } else {
-                Log.e("Log", "Failed to download result..");
+                else {
+                    Log.e("Log", "Failed to download result..");
+                }
             }
-        } catch (ClientProtocolException e) {
-            e.printStackTrace();
-        } catch (IOException e) {
-            e.printStackTrace();
+        catch (ClientProtocolException e) {
+                e.printStackTrace();
         }
-        return str.toString();
+        catch (IOException e) {
+                e.printStackTrace();
+        }
 
+        return str.toString();
     }
 
 }
