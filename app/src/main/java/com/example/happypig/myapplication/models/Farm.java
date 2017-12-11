@@ -18,6 +18,10 @@ public class Farm {
 
     private String pinOwn;
 
+    public Farm(){
+
+    }
+
     public Farm(String id,
                 String name,
                 String tel,
@@ -30,6 +34,15 @@ public class Farm {
         this.email = email;
         this.password = password;
         this.pinOwn = pinOwn;
+    }
+
+    public String toString(){
+        return  this.id+
+                this.name+
+                this.tel+
+                this.email+
+                this.password+
+                this.pinOwn;
     }
 
     public String getId() {

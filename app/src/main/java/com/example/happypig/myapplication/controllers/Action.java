@@ -17,7 +17,7 @@ public class Action {
 
     private static DBHandler handler = new DBHandler();
 
-    public static int login(String username, String password){
+    public static Farm login(String username, String password){
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 
         params.add(new BasicNameValuePair("strUser", username));
