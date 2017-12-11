@@ -13,7 +13,7 @@ import java.util.List;
  * Created by Yhingkai on 12/12/2017.
  */
 
-public class register {
+public class Register {
 
     private static DBHandler handler = new DBHandler();
 
