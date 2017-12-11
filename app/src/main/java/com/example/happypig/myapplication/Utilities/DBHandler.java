@@ -1,7 +1,6 @@
 package com.example.happypig.myapplication.Utilities;
 
 import android.util.Log;
-import com.example.happypig.myapplication.models.Farm;
 
 import org.apache.http.HttpEntity;
 import org.apache.http.HttpResponse;
@@ -29,16 +28,8 @@ import java.util.List;
 
 public class DBHandler {
 
-    public  int insertFarm(Farm farm){
+    public  int insertFarm(List<NameValuePair> params){
         String url = "http://192.168.1.5/register.php";
-        List<NameValuePair> params = new ArrayList<NameValuePair>();
-
-        params.add(new BasicNameValuePair("farmId", farm.getId()));
-        params.add(new BasicNameValuePair("farmName", farm.getName()));
-        params.add(new BasicNameValuePair("tell", farm.getTel()));
-        params.add(new BasicNameValuePair("email", farm.getEmail()));
-        params.add(new BasicNameValuePair("password", farm.getPassword()));
-        params.add(new BasicNameValuePair("pinOwn", farm.getPinOwn()));
 
         String resultServer  = getHttpPost(url,params);
         JSONObject c;
