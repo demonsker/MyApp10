@@ -53,6 +53,24 @@ public class Session {
         return email;
     }
 
+    public void setPassword(String password){
+        prefs.edit().putString("password", password).commit();
+    }
+
+    public String getPassword() {
+        String password = prefs.getString("password","");
+        return password;
+    }
+
+    public void setPin(String pin){
+        prefs.edit().putString("pin", pin).commit();
+    }
+
+    public String getPin() {
+        String pin= prefs.getString("pin","");
+        return pin;
+    }
+
     public boolean isEmpty(){
         String id = getId();
         if(id.equals(""))
