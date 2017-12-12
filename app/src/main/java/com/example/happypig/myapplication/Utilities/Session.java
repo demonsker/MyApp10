@@ -17,13 +17,40 @@ public class Session {
         prefs = PreferenceManager.getDefaultSharedPreferences(cntx);
     }
 
-    public void setUserName(String userName) {
-        prefs.edit().putString("userName", userName).commit();
+    public void setId(String id) {
+        prefs.edit().putString("id", id).commit();
     }
 
-    public String getUserName() {
-        String userName = prefs.getString("userName","");
-        return userName;
+    public String getUId() {
+        String id = prefs.getString("id","");
+        return id;
+    }
+
+    public void setName(String name) {
+        prefs.edit().putString("name", name).commit();
+    }
+
+    public String getName() {
+        String name = prefs.getString("name","");
+        return name;
+    }
+
+    public void setTel(String tel){
+        prefs.edit().putString("tel", tel).commit();
+    }
+
+    public String getTel() {
+        String tel = prefs.getString("tel","");
+        return tel;
+    }
+
+    public void setEmail(String email){
+        prefs.edit().putString("Email", email).commit();
+    }
+
+    public String getEmail() {
+        String email = prefs.getString("email","");
+        return email;
     }
 
 }
