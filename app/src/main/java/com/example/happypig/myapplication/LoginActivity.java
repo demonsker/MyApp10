@@ -22,6 +22,8 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     Button registerButton;
 
+    Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -39,6 +41,11 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password_login);
         loginButton = (Button) findViewById(R.id.login_Button);
         registerButton = (Button) findViewById(R.id.goto_Register_Button);
+
+        session = new Session(getApplicationContext());
+        if(!session.isEmpty()){
+            PageChange.toPINActivity(this);
+        }
     }
 
     public  void  gotoRegisterClick (View v)
@@ -49,9 +56,9 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginClick (View v)
     {
-        //PageChange
-        if(PageChange.toPINActivity(this))
-            return;
+        //BackDoor
+        //if(PageChange.toPINActivity(this))
+           // return;
 
         String usr = userName.getText().toString();
         String pwd = password.getText().toString();
@@ -59,9 +66,6 @@ public class LoginActivity extends AppCompatActivity {
         Farm farm = Action.login(usr,pwd);
 
         if(!farm.toString().equals("")) {
-            Session session = new Session(getApplicationContext());
-            Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
-
             session.setId(farm.getId());
             session.setName(farm.getName());
             session.setTel(farm.getTel());
@@ -69,7 +73,7 @@ public class LoginActivity extends AppCompatActivity {
             session.setPassword(farm.getPassword());
             session.setPin(farm.getPinOwn());
 
-            startActivity(intentdoor);
+            PageChange.toPINActivity(this);
         }
         else
             Toast.makeText(getApplicationContext(),"ไม่พบผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง",Toast.LENGTH_LONG).show();
