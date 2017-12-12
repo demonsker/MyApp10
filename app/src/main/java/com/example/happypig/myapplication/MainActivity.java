@@ -17,6 +17,7 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -53,6 +54,7 @@ public class MainActivity extends AppCompatActivity
         }
     }
 
+
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
@@ -81,17 +83,24 @@ public class MainActivity extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_camera) {
+        if (id == R.id.nav_home) {
+            Intent intentdoor = new Intent(getBaseContext(), MainActivity.class);
+            startActivity(intentdoor);
+
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
+        } else if (id == R.id.nav_sale) {
 
-        } else if (id == R.id.nav_slideshow) {
+        } else if (id == R.id.nav_food) {
+            Intent intentdoor = new Intent(getBaseContext(), FoodActivity.class);
+            startActivity(intentdoor);
 
-        } else if (id == R.id.nav_manage) {
+        } else if (id == R.id.nav_environment) {
+            Intent intentdoor = new Intent(getBaseContext(), EnvironmentActivity.class);
+            startActivity(intentdoor);
 
-        } else if (id == R.id.nav_share) {
+        } else if (id == R.id.nav_finance) {
 
-        } else if (id == R.id.nav_Setting) {
+        } else if (id == R.id.nav_report) {
 
         }
 

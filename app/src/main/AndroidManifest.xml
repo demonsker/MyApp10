@@ -48,12 +48,16 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Pigsty_FoodActivity"
+            android:name=".FoodActivity"
             android:label="@string/title_activity_pigsty_food_"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".Pigsty_EnviromentActivity"
+            android:name=".EnvironmentActivity"
             android:label="@string/title_activity_pigsty__enviroment"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".NotificationActivity"
+            android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar" />
     </application>
 
