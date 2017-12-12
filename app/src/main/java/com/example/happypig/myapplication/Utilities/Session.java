@@ -79,4 +79,8 @@ public class Session {
             return false;
     }
 
+    public void clear(){
+        prefs.edit().putString("id", "").commit();
+    }
+
 }
