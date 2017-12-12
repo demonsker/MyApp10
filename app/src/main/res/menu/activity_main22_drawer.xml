@@ -1,34 +1,47 @@
 <?xml version="1.0" encoding="utf-8"?>
-<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android">
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
+            android:id="@+id/nav_home"
             android:enabled="true"
             android:icon="@drawable/ic_home_black_24dp"
             android:title="หน้าหลัก" />
         <item
-            android:id="@+id/nav_gallery"
+            android:id="@+id/nav_sale"
+            android:icon="@mipmap/ic_sale"
+            android:title="ขาย" />
+        <item
+            android:id="@+id/nav_food"
+            android:enabled="true"
+            android:icon="@mipmap/ic_food"
+            android:title="อาหาร" />
+        <item
+            android:id="@+id/nav_environment"
+            android:enabled="true"
+            android:icon="@mipmap/ic_environment"
+            android:title="สภาพแวดล้อม" />
+
+        <item
+            android:id="@+id/nav_finance"
             android:enabled="true"
             android:icon="@mipmap/ic_finance"
             android:title="การเงิน" />
         <item
-            android:id="@+id/nav_slideshow"
+            android:id="@+id/nav_report"
+            android:icon="@mipmap/ic_report"
+            android:title="รายงาน" />
+        <item
+            android:id="@+id/nav_notification"
             android:icon="@drawable/ic_notifications_black_24dp"
             android:title="การแจ้งเตือน"
             android:visible="true" />
-        <item
-            android:id="@+id/nav_manage"
-            android:icon="@mipmap/ic_report"
-            android:title="รายงาน" />
+
     </group>
 
-    <item android:title="เมนูลัด">
+    <item android:title="">
         <menu>
-            <item
-                android:id="@+id/nav_share"
-                android:icon="@mipmap/ic_sale"
-                android:title="ขาย" />
             <item
                 android:id="@+id/nav_Setting"
                 android:icon="@mipmap/ic_setting"
