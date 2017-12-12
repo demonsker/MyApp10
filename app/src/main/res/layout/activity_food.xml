@@ -11,97 +11,134 @@
         android:layout_height="wrap_content"
         android:theme="@style/AppTheme.AppBarOverlay">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="?attr/colorPrimary"
-            app:popupTheme="@style/AppTheme.PopupOverlay" />
-
     </android.support.design.widget.AppBarLayout>
 
-    <RelativeLayout
-        android:id="@+id/relativeLayout"
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <RelativeLayout
-            android:id="@+id/relativeLayout2"
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="549dp"
-            android:layout_alignParentBottom="true"
-            android:layout_toEndOf="@+id/toolbar12">
-
-            <ImageView
-                android:id="@+id/imageView5"
-                android:layout_width="200dp"
-                android:layout_height="200dp"
-                android:layout_marginTop="122dp"
-                app:srcCompat="@mipmap/ic_food_empty"
-                android:layout_alignParentTop="true"
-                android:layout_centerHorizontal="true" />
-
-            <TextView
-                android:id="@+id/textView10"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/imageView5"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="32dp"
-                android:text="TextView"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-
-            <TextView
-                android:id="@+id/textView11"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_below="@+id/textView10"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="24dp"
-                android:text="TextView"
-                android:textColor="@android:color/black"
-                android:textSize="20sp" />
-        </RelativeLayout>
-
-        <TextView
-            android:id="@+id/textView9"
-            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/relativeLayout2"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="58dp"
-            android:text="ข้อมูลอาหาร"
-            android:textColor="@android:color/black"
-            android:textSize="25sp"
-            android:textStyle="bold" />
+            android:orientation="vertical">
 
-    </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/relativeLayout"
+                android:layout_width="match_parent"
+                android:layout_height="576dp">
 
-    <android.support.v4.widget.DrawerLayout
-        android:id="@+id/drawer_layout"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:fitsSystemWindows="true"
-        tools:openDrawer="start">
+                <RelativeLayout
+                    android:id="@+id/relativeLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="549dp"
+                    android:layout_alignParentBottom="true"
+                    android:layout_toEndOf="@+id/toolbar12">
 
-        <include
-            layout="@layout/app_bar_main"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:visibility="visible" />
+                    <TextView
+                        android:id="@+id/textView12"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="50dp"
+                        android:layout_marginTop="26dp"
+                        android:text="เลือกโรงเรือน :"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:layout_below="@+id/imageView5"
+                        android:layout_alignParentStart="true" />
 
-        <android.support.design.widget.NavigationView
-            android:id="@+id/nav_view"
-            android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:layout_gravity="start"
-            android:fitsSystemWindows="true"
-            android:visibility="visible"
-            app:headerLayout="@layout/nav_header_main"
-            app:menu="@menu/activity_main22_drawer" />
+                    <Spinner
+                        android:id="@+id/spinner3"
+                        android:layout_width="140dp"
+                        android:layout_height="wrap_content"
+                        android:layout_alignTop="@+id/textView12"
+                        android:layout_alignEnd="@+id/spinner4" />
 
-    </android.support.v4.widget.DrawerLayout>
+                    <ImageView
+                        android:id="@+id/imageView5"
+                        android:layout_width="200dp"
+                        android:layout_height="200dp"
+                        android:layout_alignParentTop="true"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="61dp"
+                        app:srcCompat="@mipmap/ic_food_empty" />
+
+                    <TextView
+                        android:id="@+id/textView10"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView11"
+                        android:layout_below="@+id/spinner4"
+                        android:layout_marginTop="11dp"
+                        android:text="ปริมาณอาหารในถัง : "
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView11"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView12"
+                        android:layout_below="@+id/spinner3"
+                        android:layout_marginTop="14dp"
+                        android:text="เลือกถัง : "
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <Spinner
+                        android:id="@+id/spinner4"
+                        android:layout_width="180dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="35dp"
+                        android:layout_alignTop="@+id/textView11"
+                        android:layout_toEndOf="@+id/textView11" />
+
+                    <TextView
+                        android:id="@+id/textView13"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="100 กิโลกรัม"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp"
+                        android:layout_above="@+id/textView14"
+                        android:layout_toEndOf="@+id/textView14" />
+
+                    <TextView
+                        android:id="@+id/textView14"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignStart="@+id/textView10"
+                        android:layout_below="@+id/textView10"
+                        android:layout_marginTop="14dp"
+                        android:text="อาหารจะหมดในวันที่ : "
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                    <TextView
+                        android:id="@+id/textView15"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/textView13"
+                        android:layout_alignTop="@+id/textView14"
+                        android:text="25 มกราคม"
+                        android:textColor="@android:color/black"
+                        android:textSize="18sp" />
+
+                </RelativeLayout>
+
+                <TextView
+                    android:id="@+id/textView9"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignTop="@+id/relativeLayout2"
+                    android:layout_centerHorizontal="true"
+                    android:text="ข้อมูลอาหาร"
+                    android:textColor="@android:color/black"
+                    android:textSize="25sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
 
 
 </android.support.design.widget.CoordinatorLayout>

@@ -49,6 +49,8 @@
     <string name="title_activity_regis">RegisActivity</string>
     <string name="title_activity_notification">NotificationActivity</string>
     <string name="title_activity_main2">Main2Activity</string>
+    <string name="title_activity_cleaning">cleaningActivity</string>
+    <string name="title_activity_pigsty">PigstyActivity</string>
 
 
 </resources>

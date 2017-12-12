@@ -4,7 +4,6 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.happypig.myapplication.PINActivity;
-import com.example.happypig.myapplication.PigstyActivity;
 
 /**
  * Created by Yhingkai on 12/12/2017.
