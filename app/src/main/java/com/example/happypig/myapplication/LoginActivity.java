@@ -8,15 +8,19 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.Toast;
 
 import com.example.happypig.myapplication.controllers.Action;
 import com.example.happypig.myapplication.models.Farm;
 
 public class LoginActivity extends AppCompatActivity {
+
     EditText userName;
     EditText password;
     Button loginButton;
     Button registerButton;
+
+    private int exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -36,6 +40,7 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.login_Button);
         registerButton = (Button) findViewById(R.id.goto_Register_Button);
 
+        exit = 1;
     }
 
     public  void  gotoRegisterClick (View v)
@@ -55,7 +60,16 @@ public class LoginActivity extends AppCompatActivity {
             Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
             startActivity(intentdoor);
         }
+        else
+            Toast.makeText(getApplicationContext(),"ไม่พบผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง",Toast.LENGTH_LONG).show();
+    }
 
+    @Override
+    public void onBackPressed() {
+        if( exit-- == 0)
+            finish();
+        else
+            Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
     }
 
 }
