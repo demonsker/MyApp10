@@ -1,6 +1,5 @@
 package com.example.happypig.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -50,8 +49,7 @@ public class LoginActivity extends AppCompatActivity {
 
     public  void  gotoRegisterClick (View v)
     {
-        Intent intentdoor = new Intent(getBaseContext(), RegisterActivity.class);
-        startActivity(intentdoor);
+        PageChange.toRegisterActivity(this);
     }
 
     public void loginClick (View v)
