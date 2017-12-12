@@ -77,6 +77,11 @@ public class LoginActivity extends AppCompatActivity {
             Toast.makeText(getApplicationContext(),"ไม่พบผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง",Toast.LENGTH_LONG).show();
     }
 
+    @Override
+    public void onBackPressed() {
+        Action.exit(this);
+    }
+
 }
 
 
