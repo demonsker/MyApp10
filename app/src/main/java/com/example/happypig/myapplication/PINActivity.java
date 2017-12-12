@@ -34,11 +34,6 @@ public class PINActivity extends AppCompatActivity {
 
     public  void  enterPinClick (View v)
     {
-        //Backdoor
-        session.setAuthen("yes");
-        if(PageChange.toPigstyActivity(this))
-            return;
-
         String pin = "";
 
         if(pin.equals(session.getPin())) {

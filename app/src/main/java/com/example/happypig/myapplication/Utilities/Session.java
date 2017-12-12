@@ -89,7 +89,7 @@ public class Session {
     }
 
     public void clear(){
-        prefs.edit().putString("id", "").commit();
+        prefs.edit().clear().commit();
     }
 
 }

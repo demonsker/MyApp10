@@ -13,10 +13,18 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
+
+import com.example.happypig.myapplication.Utilities.PageChange;
+import com.example.happypig.myapplication.Utilities.Session;
+import com.example.happypig.myapplication.controllers.Action;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Session session;
+
+    private int exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +50,10 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        session = new Session(getApplicationContext());
+
+        exit = 1;
     }
 
     @Override
@@ -49,8 +61,12 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        }
+        else {
+            if (exit-- == 0)
+                Action.exit(this);
+            else
+                Toast.makeText(getApplicationContext(), "กดอีกครั้งเพื่อออกจากแอพพลิเคชัน", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -102,6 +118,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_report) {
 
+        } else if (id == R.id.nav_logout) {
+            session.clear();
+            PageChange.toLoginActivity(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
