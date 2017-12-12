@@ -18,6 +18,7 @@
     <string name="prompt_ConfirmPassword">ยืนยันรหัสผ่าน</string>
     <string name="prompt_PIN">PIN</string>
     <string name="prompt_Address">ที่อยู่</string>
+    <string name="prompt_Building">จำนวนโรงเรือน</string>
 
     //Enter PIN
     <string name="prompt_pinOwn">ใส่ PIN</string>
@@ -46,6 +47,8 @@
     <string name="title_activity_pigsty_food_">Pigsty_food_Activity</string>
     <string name="title_activity_pigsty__enviroment">Pigsty_EnviromentActivity</string>
     <string name="title_activity_regis">RegisActivity</string>
+    <string name="title_activity_notification">NotificationActivity</string>
+    <string name="title_activity_main2">Main2Activity</string>
 
 
 </resources>

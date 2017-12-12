@@ -4,7 +4,17 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.happypig.myapplication.Pigsty_FoodActivity">
+    tools:context="com.example.happypig.myapplication.EnvironmentActivity">
+
+    <android.support.design.widget.NavigationView
+        android:id="@+id/nav_view"
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_gravity="start"
+        android:fitsSystemWindows="true"
+        android:visibility="gone"
+        app:headerLayout="@layout/nav_header_main"
+        app:menu="@menu/activity_main22_drawer" />
 
     <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
@@ -36,44 +46,55 @@
             android:theme="?attr/actionBarTheme" />
 
         <Button
-            android:id="@+id/button"
-            android:layout_width="105dp"
+            android:id="@+id/button2"
+            android:layout_width="200dp"
             android:layout_height="60dp"
-            android:layout_alignParentStart="true"
             android:layout_below="@+id/toolbar12"
             android:background="#f9035b57"
             android:backgroundTint="#f9035b57"
-            android:text="สุกร"
-            android:textColor="@android:color/background_light"
-            android:textSize="18sp"
-            android:textStyle="bold" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="105dp"
-            android:layout_height="60dp"
-            android:layout_below="@+id/toolbar12"
-            android:layout_toEndOf="@+id/button"
-            android:background="#05807a"
-            android:backgroundTint="#05807a"
-            android:text="อาหาร"
+            android:text="อุณหภูมิ"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
             android:textStyle="bold" />
 
         <Button
             android:id="@+id/button6"
-            android:layout_width="105dp"
+            android:layout_width="200dp"
             android:layout_height="60dp"
             android:layout_alignParentEnd="true"
             android:layout_alignTop="@+id/button2"
             android:layout_toEndOf="@+id/button2"
-            android:background="#f9035b57"
-            android:backgroundTint="#f9035b57"
-            android:text="สภาพแวดล้อม"
-            android:textColor="@android:color/background_light"
+            android:background="@android:color/background_light"
+            android:backgroundTint="@android:color/background_light"
+            android:text="ความสะอาด"
+            android:textColor="@android:color/black"
             android:textSize="18sp"
             android:textStyle="bold" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/button2">
+
+            <Button
+                android:id="@+id/button3"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="152dp"
+                android:text="Button" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/button2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="95dp"
+            android:text="TextView" />
 
     </RelativeLayout>
 
