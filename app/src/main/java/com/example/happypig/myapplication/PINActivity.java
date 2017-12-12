@@ -1,6 +1,7 @@
 package com.example.happypig.myapplication;
 
 import android.content.Intent;
+import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -26,10 +27,8 @@ public class PINActivity extends AppCompatActivity {
         exit = 1;
         session = new Session(getApplicationContext());
         if(session.getAuthen().equals("yes")){
-            
+            PageChange.toPigstyActivity(this);
         }
-
-
     }
 
     public  void  enterPinClick (View v)
@@ -43,8 +42,7 @@ public class PINActivity extends AppCompatActivity {
 
         if(pin.equals(session.getPin())) {
             session.setAuthen("yes");
-            Intent intentdoor = new Intent(getBaseContext(), PigstyActivity.class);
-            startActivity(intentdoor);
+            PageChange.toPigstyActivity(this);
         }
         else{
             Toast.makeText(getApplicationContext(),"PIN ไม่ถูกต้อง",Toast.LENGTH_LONG).show();
@@ -53,12 +51,10 @@ public class PINActivity extends AppCompatActivity {
 
     public  void  skipClick (View v)
     {
-        Intent intentdoor = new Intent(getBaseContext(), MainActivity.class);
-        startActivity(intentdoor);
+        PageChange.toMainActivity(this);
     }
     public  void  fabClick (View v) {
-        Intent intentdoor = new Intent(getBaseContext(), AddActivity.class);
-        startActivity(intentdoor);
+        PageChange.toAddActivity(this);
     }
 
     @Override
