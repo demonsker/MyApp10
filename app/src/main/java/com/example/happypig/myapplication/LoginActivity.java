@@ -10,6 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.happypig.myapplication.Utilities.Session;
 import com.example.happypig.myapplication.controllers.Action;
 import com.example.happypig.myapplication.models.Farm;
 
@@ -57,7 +58,16 @@ public class LoginActivity extends AppCompatActivity {
         Farm farm = Action.login(usr,pwd);
 
         if(!farm.toString().equals("")) {
+            Session session = new Session(getApplicationContext());
             Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
+
+            session.setId(farm.getId());
+            session.setName(farm.getName());
+            session.setTel(farm.getTel());
+            session.setEmail(farm.getEmail());
+            session.setPassword(farm.getPassword());
+            session.setPin(farm.getPinOwn());
+
             startActivity(intentdoor);
         }
         else
