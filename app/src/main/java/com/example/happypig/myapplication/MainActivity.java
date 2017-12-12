@@ -1,9 +1,11 @@
 package com.example.happypig.myapplication;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -13,10 +15,19 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.RelativeLayout;
+import android.widget.Toast;
+
+import com.example.happypig.myapplication.Utilities.PageChange;
+import com.example.happypig.myapplication.Utilities.Session;
+import com.example.happypig.myapplication.controllers.Action;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    Session session;
+    RelativeLayout dynamicContent;
+    private int exit;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +53,12 @@ public class MainActivity extends AppCompatActivity
 
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
+
+        dynamicContent = (RelativeLayout) findViewById(R.id.r1);
+
+        session = new Session(getApplicationContext());
+
+        exit = 1;
     }
 
     @Override
@@ -49,8 +66,12 @@ public class MainActivity extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         if (drawer.isDrawerOpen(GravityCompat.START)) {
             drawer.closeDrawer(GravityCompat.START);
-        } else {
-            super.onBackPressed();
+        }
+        else {
+            if (exit-- == 0)
+                Action.exit(this);
+            else
+                Toast.makeText(getApplicationContext(), "กดอีกครั้งเพื่อออกจากแอพพลิเคชัน", Toast.LENGTH_LONG).show();
         }
     }
 
@@ -91,9 +112,9 @@ public class MainActivity extends AppCompatActivity
         } else if (id == R.id.nav_sale) {
 
         } else if (id == R.id.nav_food) {
-            Intent intentdoor = new Intent(getBaseContext(), FoodActivity.class);
-            startActivity(intentdoor);
-
+            dynamicContent.removeAllViews();
+            View wizard = getLayoutInflater().inflate(R.layout.activity_food, dynamicContent, false);
+            dynamicContent.addView(wizard);
         } else if (id == R.id.nav_environment) {
             Intent intentdoor = new Intent(getBaseContext(), EnvironmentActivity.class);
             startActivity(intentdoor);
@@ -102,6 +123,9 @@ public class MainActivity extends AppCompatActivity
 
         } else if (id == R.id.nav_report) {
 
+        } else if (id == R.id.nav_logout) {
+            session.clear();
+            PageChange.toLoginActivity(this);
         }
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

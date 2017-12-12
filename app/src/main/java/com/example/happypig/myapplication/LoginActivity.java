@@ -1,6 +1,5 @@
 package com.example.happypig.myapplication;
 
-import android.content.Intent;
 import android.os.Bundle;
 import android.os.StrictMode;
 import android.support.v7.app.AppCompatActivity;
@@ -10,7 +9,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.happypig.myapplication.Utilities.Backdoor;
+import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
 import com.example.happypig.myapplication.controllers.Action;
 import com.example.happypig.myapplication.models.Farm;
@@ -22,7 +21,7 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     Button registerButton;
 
-    private int exit;
+    Session session;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,20 +41,22 @@ public class LoginActivity extends AppCompatActivity {
         loginButton = (Button) findViewById(R.id.login_Button);
         registerButton = (Button) findViewById(R.id.goto_Register_Button);
 
-        exit = 1;
+        session = new Session(getApplicationContext());
+        if(!session.isEmpty()){
+            PageChange.toPINActivity(this);
+        }
     }
 
     public  void  gotoRegisterClick (View v)
     {
-        Intent intentdoor = new Intent(getBaseContext(), RegisterActivity.class);
-        startActivity(intentdoor);
+        PageChange.toRegisterActivity(this);
     }
 
     public void loginClick (View v)
     {
-        //Backdoor
-        if(Backdoor.toPINActivity(this))
-            return;
+        //BackDoor
+        //if(PageChange.toPINActivity(this))
+           // return;
 
         String usr = userName.getText().toString();
         String pwd = password.getText().toString();
@@ -63,9 +64,6 @@ public class LoginActivity extends AppCompatActivity {
         Farm farm = Action.login(usr,pwd);
 
         if(!farm.toString().equals("")) {
-            Session session = new Session(getApplicationContext());
-            Intent intentdoor = new Intent(getBaseContext(), PINActivity.class);
-
             session.setId(farm.getId());
             session.setName(farm.getName());
             session.setTel(farm.getTel());
@@ -73,18 +71,10 @@ public class LoginActivity extends AppCompatActivity {
             session.setPassword(farm.getPassword());
             session.setPin(farm.getPinOwn());
 
-            startActivity(intentdoor);
+            PageChange.toPINActivity(this);
         }
         else
             Toast.makeText(getApplicationContext(),"ไม่พบผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง",Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onBackPressed() {
-        if( exit-- == 0)
-            finish();
-        else
-            Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
     }
 
 }

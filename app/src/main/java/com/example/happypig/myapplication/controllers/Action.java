@@ -1,5 +1,8 @@
 package com.example.happypig.myapplication.controllers;
 
+import android.content.Intent;
+import android.support.v7.app.AppCompatActivity;
+
 import com.example.happypig.myapplication.Utilities.DBHandler;
 import com.example.happypig.myapplication.models.Farm;
 
@@ -37,6 +40,14 @@ public class Action {
         params.add(new BasicNameValuePair("pinOwn", farm.getPinOwn()));
 
         return handler.insertFarm(params);
+    }
+
+    public static int exit(AppCompatActivity page){
+        Intent homeIntent = new Intent(Intent.ACTION_MAIN);
+        homeIntent.addCategory( Intent.CATEGORY_HOME );
+        homeIntent.setFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+        page.startActivity(homeIntent);
+        return 1;
     }
 
 }
