@@ -71,6 +71,15 @@ public class Session {
         return pin;
     }
 
+    public void setAuthen(String authen){
+        prefs.edit().putString("authen", authen).commit();
+    }
+
+    public  String getAuthen(){
+        String authen= prefs.getString("authen","");
+        return authen;
+    }
+
     public boolean isEmpty(){
         String id = getId();
         if(id.equals(""))

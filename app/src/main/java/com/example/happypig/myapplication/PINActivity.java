@@ -14,6 +14,8 @@ public class PINActivity extends AppCompatActivity {
 
     private int exit;
 
+    Session session;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -22,18 +24,25 @@ public class PINActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         exit = 1;
+        session = new Session(getApplicationContext());
+        if(session.getAuthen().equals("yes")){
+            
+        }
+
+
     }
 
     public  void  enterPinClick (View v)
     {
-        //PageChange
+        //Backdoor
+        session.setAuthen("yes");
         if(PageChange.toPigstyActivity(this))
             return;
 
-        Session session = new Session(getApplicationContext());
         String pin = "";
 
         if(pin.equals(session.getPin())) {
+            session.setAuthen("yes");
             Intent intentdoor = new Intent(getBaseContext(), PigstyActivity.class);
             startActivity(intentdoor);
         }
