@@ -10,7 +10,7 @@ import com.example.happypig.myapplication.PigstyActivity;
  * Created by Yhingkai on 12/12/2017.
  */
 
-public class Backdoor {
+public class PageChange {
 
     public static boolean toPINActivity(AppCompatActivity page){
         Intent intentdoor = new Intent(page.getBaseContext(), PINActivity.class);

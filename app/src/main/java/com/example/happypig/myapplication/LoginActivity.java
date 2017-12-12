@@ -10,7 +10,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
-import com.example.happypig.myapplication.Utilities.Backdoor;
+import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
 import com.example.happypig.myapplication.controllers.Action;
 import com.example.happypig.myapplication.models.Farm;
@@ -53,8 +53,8 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginClick (View v)
     {
-        //Backdoor
-        if(Backdoor.toPINActivity(this))
+        //PageChange
+        if(PageChange.toPINActivity(this))
             return;
 
         String usr = userName.getText().toString();
