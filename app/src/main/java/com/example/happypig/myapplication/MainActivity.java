@@ -26,7 +26,7 @@ public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Session session;
-    RelativeLayout dynamicContent;
+    RelativeLayout layout;
     private int exit;
 
     @Override
@@ -54,9 +54,12 @@ public class MainActivity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
 
-        dynamicContent = (RelativeLayout) findViewById(R.id.r1);
+        layout = (RelativeLayout) findViewById(R.id.r1);
 
         session = new Session(getApplicationContext());
+        if(session.isEmpty()){
+            PageChange.toLoginActivity(this);
+        }
 
         exit = 1;
     }
@@ -101,23 +104,19 @@ public class MainActivity extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            Intent intentdoor = new Intent(getBaseContext(), MainActivity.class);
-            startActivity(intentdoor);
+            layout.removeAllViews();
 
-            // Handle the camera action
         } else if (id == R.id.nav_sale) {
 
         } else if (id == R.id.nav_food) {
-            dynamicContent.removeAllViews();
-            View wizard = getLayoutInflater().inflate(R.layout.activity_food, dynamicContent, false);
-            dynamicContent.addView(wizard);
+            changTab(R.layout.activity_food,layout);
+
         } else if (id == R.id.nav_environment) {
-            Intent intentdoor = new Intent(getBaseContext(), EnvironmentActivity.class);
-            startActivity(intentdoor);
+            changTab(R.layout.activity_environment,layout);
 
         } else if (id == R.id.nav_finance) {
 
@@ -133,6 +132,11 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
+    public void changTab(int activity, RelativeLayout layout){
+        layout.removeAllViews();
+        View content = getLayoutInflater().inflate(activity, layout, false);
+        layout.addView(content);
+    }
 
 
 
