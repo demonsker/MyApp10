@@ -2,11 +2,16 @@ package com.example.happypig.myapplication;
 
 import android.app.Activity;
 import android.os.Bundle;
+import android.support.design.widget.FloatingActionButton;
+import android.support.design.widget.Snackbar;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Toast;
 
 import com.example.happypig.myapplication.controllers.Action;
+
+import android.view.View;
+
 
 public class PigstyActivity extends AppCompatActivity {
 
@@ -18,6 +23,14 @@ public class PigstyActivity extends AppCompatActivity {
         setContentView(R.layout.activity_pigsty);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
+        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
+        fab.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                        .setAction("Action", null).show();
+            }
+        });
 
         exit = 1;
     }
@@ -30,4 +43,5 @@ public class PigstyActivity extends AppCompatActivity {
         else
             Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
     }
+
 }

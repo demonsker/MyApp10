@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.example.happypig.myapplication.NotificationActivity"
-    tools:showIn="@layout/activity_notification">
+    tools:context="com.example.happypig.myapplication.PigstyActivity"
+    tools:showIn="@layout/activity_pigsty">
 
 </android.support.constraint.ConstraintLayout>

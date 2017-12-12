@@ -38,11 +38,6 @@
             android:label="@string/title_activity_add"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".PigstyActivity"
-            android:label="@string/title_activity_sub__main"
-            android:theme="@style/AppTheme.NoActionBar">
-        </activity>
-        <activity
             android:name=".FoodActivity"
             android:label="@string/title_activity_pigsty_food_"
             android:theme="@style/AppTheme.NoActionBar" />
@@ -54,6 +49,14 @@
             android:name=".NotificationActivity"
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".cleaningActivity"
+            android:label="@string/title_activity_cleaning"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".PigstyActivity"
+            android:label="@string/title_activity_pigsty"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
 </manifest>
