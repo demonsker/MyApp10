@@ -21,7 +21,7 @@ public class Session {
         prefs.edit().putString("id", id).commit();
     }
 
-    public String getUId() {
+    public String getId() {
         String id = prefs.getString("id","");
         return id;
     }
@@ -51,6 +51,14 @@ public class Session {
     public String getEmail() {
         String email = prefs.getString("email","");
         return email;
+    }
+
+    public boolean isEmpty(){
+        String id = getId();
+        if(id.equals(""))
+            return true;
+        else
+            return false;
     }
 
 }
