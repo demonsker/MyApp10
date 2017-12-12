@@ -10,6 +10,7 @@ import android.widget.Toast;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
+import com.example.happypig.myapplication.controllers.Action;
 
 public class PINActivity extends AppCompatActivity {
 
@@ -60,8 +61,7 @@ public class PINActivity extends AppCompatActivity {
     @Override
     public void onBackPressed() {
         if( exit-- == 0) {
-            finish();
-            System.exit(0);
+            Action.exit(this);
         }
         else
             Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
