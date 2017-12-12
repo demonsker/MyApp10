@@ -35,4 +35,16 @@ public class PageChange {
         return true;
     }
 
+    public static boolean toMainActivity(AppCompatActivity page){
+        Intent intentdoor = new Intent(page.getBaseContext(), MainActivity.class);
+        page.startActivity(intentdoor);
+        return true;
+    }
+
+    public static boolean toAddActivity(AppCompatActivity page){
+        Intent intentdoor = new Intent(page.getBaseContext(), AddActivity.class);
+        page.startActivity(intentdoor);
+        return true;
+    }
+
 }
