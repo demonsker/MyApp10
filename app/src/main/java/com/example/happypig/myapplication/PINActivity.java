@@ -12,6 +12,8 @@ import com.example.happypig.myapplication.Utilities.Session;
 
 public class PINActivity extends AppCompatActivity {
 
+    private int exit;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -19,7 +21,7 @@ public class PINActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-
+        exit = 1;
     }
 
     public  void  enterPinClick (View v)
@@ -48,6 +50,16 @@ public class PINActivity extends AppCompatActivity {
     public  void  fabClick (View v) {
         Intent intentdoor = new Intent(getBaseContext(), AddActivity.class);
         startActivity(intentdoor);
+    }
+
+    @Override
+    public void onBackPressed() {
+        if( exit-- == 0) {
+            finish();
+            System.exit(0);
+        }
+        else
+            Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
     }
 
 }

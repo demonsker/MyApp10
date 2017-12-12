@@ -22,8 +22,6 @@ public class LoginActivity extends AppCompatActivity {
     Button loginButton;
     Button registerButton;
 
-    private int exit;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,8 +39,6 @@ public class LoginActivity extends AppCompatActivity {
         password = (EditText) findViewById(R.id.password_login);
         loginButton = (Button) findViewById(R.id.login_Button);
         registerButton = (Button) findViewById(R.id.goto_Register_Button);
-
-        exit = 1;
     }
 
     public  void  gotoRegisterClick (View v)
@@ -77,14 +73,6 @@ public class LoginActivity extends AppCompatActivity {
         }
         else
             Toast.makeText(getApplicationContext(),"ไม่พบผู้ใช้งานหรือรหัสผ่านไม่ถูกต้อง",Toast.LENGTH_LONG).show();
-    }
-
-    @Override
-    public void onBackPressed() {
-        if( exit-- == 0)
-            finish();
-        else
-            Toast.makeText(getApplicationContext(),"กดอีกครั้งเพื่อออกจากแอพพลิเคชัน",Toast.LENGTH_LONG).show();
     }
 
 }
