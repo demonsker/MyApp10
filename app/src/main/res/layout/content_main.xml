@@ -8,4 +8,10 @@
     tools:context="com.example.happypig.myapplication.MainActivity"
     tools:showIn="@layout/app_bar_main">
 
+    <RelativeLayout
+        android:id="@+id/r1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </RelativeLayout>
 </android.support.constraint.ConstraintLayout>
