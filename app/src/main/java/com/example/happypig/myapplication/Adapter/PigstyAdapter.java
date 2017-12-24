@@ -39,10 +39,10 @@ public class PigstyAdapter extends RecyclerView.Adapter<PigstyMapper> {
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                //Intent intentdoor = new Intent(context, PigstyActivity.class);
-                //intentdoor.putExtra("general", pigsty.get(position));
-                //context.startActivity(intentdoor);
-                Toast.makeText(context,((Pigsty) pigsty.get(position)).getName(), Toast.LENGTH_SHORT).show();
+                Intent intentdoor = new Intent(context, PigstyActivity.class);
+                intentdoor.putExtra("general", pigsty.get(position));
+                context.startActivity(intentdoor);
+               // Toast.makeText(context,((Pigsty) pigsty.get(position)).getName(), Toast.LENGTH_SHORT).show();
             }
         });
     }

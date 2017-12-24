@@ -6,6 +6,7 @@ import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
 import android.support.v7.widget.GridLayoutManager;
+import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -66,9 +67,11 @@ public class MainActivity extends AppCompatActivity
         //create pigsty
         Pigsty person1 = new Pigsty("123456789","Prayuth");
         Pigsty person2 = new Pigsty("123456711","YhingLuk");
+        Pigsty person3 = new Pigsty("123456711","Pom");
         //add pigsty
         pigsty.add(person1);
         pigsty.add(person2);
+        pigsty.add(person3);
 
 
         RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
