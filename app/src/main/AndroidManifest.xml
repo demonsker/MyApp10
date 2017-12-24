@@ -56,6 +56,10 @@
         <activity
             android:name=".PigstyActivity"
             android:label="@string/title_activity_pigsty"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SubMainActivity"
+            android:label="@string/title_activity_sub_main"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
