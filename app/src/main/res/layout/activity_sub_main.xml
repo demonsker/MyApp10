@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.happypig.myapplication.SubMainActivity">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="628dp">
+
+                <ImageButton
+                    android:id="@+id/pigstyPicture"
+                    android:layout_width="150dp"
+                    android:layout_height="150dp"
+                    android:layout_alignParentStart="true"
+                    android:layout_alignParentTop="true"
+                    android:layout_marginStart="20dp"
+                    android:layout_marginTop="23dp"
+                    android:background="@android:color/darker_gray"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:tint="@drawable/ic_menu_gallery"
+                    app:srcCompat="@drawable/ic_menu_gallery" />
+
+                <Button
+                    android:id="@+id/pigstyName"
+                    android:layout_width="150dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBottom="@+id/pigstyPicture"
+                    android:layout_alignStart="@+id/pigstyPicture"
+                    android:background="?android:attr/colorForeground"
+                    android:text="ชื่อคอก"
+                    android:textColor="@android:color/background_light" />
+
+            </RelativeLayout>
+        </LinearLayout>
+    </ScrollView>
+
+
+</android.support.design.widget.CoordinatorLayout>
