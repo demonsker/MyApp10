@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="190dp"
+    android:layout_height="178dp"
+    tools:context="com.example.happypig.myapplication.SubMainActivity">
+
+    <LinearLayout
+        android:layout_width="190dp"
+        android:layout_height="178dp"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="190dp"
+            android:layout_height="178dp">
+
+            <Button
+                android:id="@+id/pigstyName"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/pigstyPicture"
+                android:layout_alignStart="@+id/pigstyPicture"
+                android:background="?android:attr/colorForeground"
+                android:text="ชื่อคอก"
+                android:textColor="@android:color/background_light" />
+
+            <ImageView
+                android:id="@+id/pigstyPicture"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignParentStart="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="22dp"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="@android:color/darker_gray"
+                app:srcCompat="@drawable/ic_menu_gallery" />
+
+        </RelativeLayout>
+    </LinearLayout>
+
+
+</android.support.design.widget.CoordinatorLayout>

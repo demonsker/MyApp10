@@ -4,11 +4,6 @@ import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.support.v7.widget.GridLayoutManager;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -21,21 +16,17 @@ import android.view.MenuItem;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
-import com.example.happypig.myapplication.Adapter.PigstyAdapter;
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
 import com.example.happypig.myapplication.controllers.Action;
-import com.example.happypig.myapplication.models.Pigsty;
-
-import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Session session;
     RelativeLayout layout;
+
     private int exit;
-    ArrayList<Pigsty> pigsty = new ArrayList<Pigsty>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -63,23 +54,6 @@ public class MainActivity extends AppCompatActivity
         navigationView.setNavigationItemSelectedListener(this);
 
         layout = (RelativeLayout) findViewById(R.id.r1);
-
-        //create pigsty
-        Pigsty person1 = new Pigsty("123456789","Prayuth");
-        Pigsty person2 = new Pigsty("123456711","YhingLuk");
-        Pigsty person3 = new Pigsty("123456711","Pom");
-        //add pigsty
-        pigsty.add(person1);
-        pigsty.add(person2);
-        pigsty.add(person3);
-
-
-        RecyclerView recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(),2);
-        recyclerView.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
-
-        PigstyAdapter pigstyAdapter = new PigstyAdapter(this, pigsty);
-        recyclerView.setAdapter(pigstyAdapter);
 
         session = new Session(getApplicationContext());
         if(session.isEmpty()){
@@ -133,8 +107,7 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            layout.removeAllViews();
-
+            changTab(R.layout.activity_sub_main,layout);
         } else if (id == R.id.nav_sale) {
 
         } else if (id == R.id.nav_food) {
@@ -162,7 +135,5 @@ public class MainActivity extends AppCompatActivity
         View content = getLayoutInflater().inflate(activity, layout, false);
         layout.addView(content);
     }
-
-
 
 }

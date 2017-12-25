@@ -2,43 +2,20 @@
 <android.support.design.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="190dp"
-    android:layout_height="178dp"
-    tools:context="com.example.happypig.myapplication.SubMainActivity">
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.happypig.myapplication.FoodActivity">
 
-    <LinearLayout
-        android:layout_width="190dp"
-        android:layout_height="178dp"
-        android:orientation="vertical">
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
 
-        <RelativeLayout
-            android:layout_width="190dp"
-            android:layout_height="178dp">
-
-            <Button
-                android:id="@+id/pigstyName"
-                android:layout_width="150dp"
-                android:layout_height="30dp"
-                android:layout_alignBottom="@+id/pigstyPicture"
-                android:layout_alignStart="@+id/pigstyPicture"
-                android:background="?android:attr/colorForeground"
-                android:text="ชื่อคอก"
-                android:textColor="@android:color/background_light" />
-
-            <ImageView
-                android:id="@+id/pigstyPicture"
-                android:layout_width="150dp"
-                android:layout_height="150dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:layout_marginStart="20dp"
-                android:layout_marginTop="22dp"
-                android:background="@android:color/darker_gray"
-                android:backgroundTint="@android:color/darker_gray"
-                app:srcCompat="@drawable/ic_menu_gallery" />
-
-        </RelativeLayout>
-    </LinearLayout>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 </android.support.design.widget.CoordinatorLayout>
