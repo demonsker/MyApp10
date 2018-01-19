@@ -38,20 +38,22 @@
                         android:id="@+id/textView12"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_below="@+id/imageView5"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="26dp"
                         android:text="เลือกโรงเรือน :"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
-                        android:layout_below="@+id/imageView5"
-                        android:layout_alignParentStart="true" />
+                        android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/spinner3"
-                        android:layout_width="140dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
+                        android:layout_alignEnd="@+id/textView15"
                         android:layout_alignTop="@+id/textView12"
-                        android:layout_alignEnd="@+id/spinner4" />
+                        android:entries="@array/foodInformation" />
 
                     <ImageView
                         android:id="@+id/imageView5"
@@ -70,8 +72,9 @@
                         android:layout_below="@+id/spinner4"
                         android:layout_marginTop="11dp"
                         android:text="ปริมาณอาหารในถัง : "
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp" />
+                        android:textColor="@android:color/holo_blue_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView11"
@@ -82,15 +85,16 @@
                         android:layout_marginTop="14dp"
                         android:text="เลือกถัง : "
                         android:textColor="@android:color/black"
-                        android:textSize="18sp" />
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <Spinner
                         android:id="@+id/spinner4"
-                        android:layout_width="180dp"
+                        android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_marginStart="35dp"
+                        android:layout_alignEnd="@+id/textView15"
                         android:layout_alignTop="@+id/textView11"
-                        android:layout_toEndOf="@+id/textView11" />
+                        android:entries="@array/foodInformation" />
 
                     <TextView
                         android:id="@+id/textView13"
@@ -110,8 +114,9 @@
                         android:layout_below="@+id/textView10"
                         android:layout_marginTop="14dp"
                         android:text="อาหารจะหมดในวันที่ : "
-                        android:textColor="@android:color/black"
-                        android:textSize="18sp" />
+                        android:textColor="@android:color/holo_red_dark"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/textView15"
@@ -122,6 +127,19 @@
                         android:text="25 มกราคม"
                         android:textColor="@android:color/black"
                         android:textSize="18sp" />
+
+                    <Button
+                        android:id="@+id/button5"
+                        android:layout_width="160dp"
+                        android:layout_height="50dp"
+                        android:layout_below="@+id/textView14"
+                        android:layout_centerHorizontal="true"
+                        android:layout_marginTop="33dp"
+                        android:background="@color/colorPrimary"
+                        android:backgroundTint="@color/colorPrimary"
+                        android:text="ดูข้อมูลอาหารทั้งหมด"
+                        android:textColor="@android:color/background_light"
+                        android:textSize="16sp" />
 
                 </RelativeLayout>
 

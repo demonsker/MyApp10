@@ -27,12 +27,28 @@
     <string-array name="chocolate">
 
         <item>เลือกโรงเรือน</item>
-        <item>Crackles</item>
-        <item>Fruit and Nut</item>
-        <item>Dairy milk silk</item>
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+
+    </string-array>
+    <string-array name="foodInformation">
+
+
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
 
     </string-array>
 
+    <string-array name="pigInformation">
+
+        <item>จัดกลุ่มตามโรงเรือน</item>
+        <item>จัดกลุ่มตามวันเกิด</item>
+        <item>จัดกลุ่มตามน้ำหนัก</item>
+        <item>จัดกลุ่มตามการฉีดวัคซีน</item>
+
+    </string-array>
 
     <string name="action_settings">Settings</string>
 
