@@ -64,7 +64,8 @@
                     android:layout_toStartOf="@+id/spinner2"
                     android:text="เลือกโรงเรือน :"
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Spinner
                     android:id="@+id/spinner2"
@@ -81,10 +82,11 @@
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/textView5"
                     android:layout_below="@+id/textView5"
-                    android:layout_marginTop="23dp"
+                    android:layout_marginTop="31dp"
                     android:text="อุณหภูมิปัจจุบัน : "
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tempMin_textViwe"
@@ -95,18 +97,20 @@
                     android:layout_marginTop="18dp"
                     android:text="อุณหภูมิต่ำสุด : "
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <TextView
                     android:id="@+id/tempMax_textViwe"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/textView8"
-                    android:layout_below="@+id/textView8"
-                    android:layout_marginTop="47dp"
+                    android:layout_below="@+id/textView19"
+                    android:layout_marginTop="37dp"
                     android:text="อุณหภูมิสูงสุด : "
                     android:textColor="@android:color/black"
-                    android:textSize="18sp" />
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
 
                 <Button
                     android:id="@+id/setTemp_Button"
@@ -114,10 +118,58 @@
                     android:layout_height="50dp"
                     android:layout_below="@+id/tempMin_textViwe"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="26dp"
+                    android:layout_marginTop="42dp"
                     android:background="@color/colorPrimary"
                     android:backgroundTint="@color/colorPrimary"
                     android:text="ตั้งค่าอุณหภูมิ"
+                    android:textColor="@android:color/background_light"
+                    android:textSize="18sp" />
+
+                <TextView
+                    android:id="@+id/textView19"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignStart="@+id/tempMax_textViwe"
+                    android:layout_below="@+id/textView8"
+                    android:layout_marginTop="43dp"
+                    android:textColor="@android:color/background_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView18"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tempMin_textViwe"
+                    android:layout_alignBottom="@+id/tempMin_textViwe"
+                    android:layout_alignEnd="@+id/spinner2"
+                    android:text="18 องศสเซลเซียส"
+                    android:textColor="@android:color/holo_blue_light"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/textView17"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignBaseline="@+id/tempMax_textViwe"
+                    android:layout_alignBottom="@+id/tempMax_textViwe"
+                    android:layout_alignStart="@+id/textView18"
+                    android:text="39 องศสเซลเซียส"
+                    android:textColor="@android:color/holo_red_dark"
+                    android:textSize="18sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="380dp"
+                    android:layout_height="30dp"
+                    android:layout_alignBaseline="@+id/textView19"
+                    android:layout_alignBottom="@+id/textView19"
+                    android:layout_centerHorizontal="true"
+                    android:background="@android:color/darker_gray"
+                    android:backgroundTint="@android:color/darker_gray"
+                    android:text="การตั้งค่าอุณหภูมิ"
                     android:textColor="@android:color/background_light"
                     android:textSize="18sp" />
 
@@ -127,35 +179,14 @@
                 android:id="@+id/textView16"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_alignParentEnd="true"
                 android:layout_below="@+id/button2"
-                android:layout_marginEnd="54dp"
-                android:layout_marginTop="79dp"
+                android:layout_marginTop="88dp"
+                android:layout_toEndOf="@+id/button3"
                 android:text="30 องศาเซลเซียส"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <TextView
-                android:id="@+id/textView17"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginTop="47dp"
-                android:text="39 องศสเซลเซียส"
-                android:textColor="@android:color/black"
+                android:textColor="@android:color/holo_green_dark"
                 android:textSize="18sp"
-                android:layout_below="@+id/textView16"
-                android:layout_alignStart="@+id/textView16" />
+                android:textStyle="bold" />
 
-            <TextView
-                android:id="@+id/textView18"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/textView17"
-                android:layout_below="@+id/textView17"
-                android:layout_marginTop="20dp"
-                android:text="18 องศสเซลเซียส"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
         </RelativeLayout>
 
     </RelativeLayout>
