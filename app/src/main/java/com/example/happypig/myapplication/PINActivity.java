@@ -38,8 +38,7 @@ public class PINActivity extends AppCompatActivity {
 
         if(pin.equals(session.getPin())) {
             session.setAuthen("yes");
-            //PageChange.toPigstyActivity(this);
-            PageChange
+            PageChange.toPigstyActivity(this);
         }
         else{
             Toast.makeText(getApplicationContext(),"PIN ไม่ถูกต้อง",Toast.LENGTH_LONG).show();

@@ -22,7 +22,7 @@ public class SubMainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.content_sub_main);
+        setContentView(R.layout.activity_sub_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
@@ -35,16 +35,11 @@ public class SubMainActivity extends AppCompatActivity {
         pigsty.add(person2);
         pigsty.add(person3);
 
-        recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
+       /* recyclerView = (RecyclerView) findViewById(R.id.recyclerView);
         gridLayoutManager = new GridLayoutManager(getApplicationContext(),2);
-
-        showPigsty();
-    }
-
-    public void showPigsty(){
         recyclerView.setLayoutManager(gridLayoutManager); // set LayoutManager to RecyclerView
 
         PigstyAdapter pigstyAdapter = new PigstyAdapter(this, pigsty);
-        recyclerView.setAdapter(pigstyAdapter);
+        recyclerView.setAdapter(pigstyAdapter); */
     }
 }

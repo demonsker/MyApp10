@@ -27,7 +27,7 @@ public class PigstyAdapter extends RecyclerView.Adapter<PigstyMapper> {
      @Override
      public PigstyMapper onCreateViewHolder(ViewGroup parent, int viewType) {
      // infalte the item Layout
-     View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.activity_sub_main, parent, false);
+     View v = LayoutInflater.from(parent.getContext()).inflate(R.layout.content_sub_main, parent, false);
      // set the view's size, margins, paddings and layout parameters
      PigstyMapper vh = new PigstyMapper(v); // pass the view to View Holder
      return vh;

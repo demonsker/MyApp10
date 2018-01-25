@@ -35,15 +35,6 @@ public class MainActivity extends AppCompatActivity
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentdoor = new Intent(getBaseContext(), AddActivity.class);
-                startActivity(intentdoor);
-            }
-        });
-
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
                 this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
@@ -61,6 +52,9 @@ public class MainActivity extends AppCompatActivity
         }
 
         exit = 1;
+
+        changTab(R.layout.activity_sub_main,layout);
+
     }
 
     @Override
@@ -108,7 +102,9 @@ public class MainActivity extends AppCompatActivity
 
         if (id == R.id.nav_home) {
             changTab(R.layout.activity_sub_main,layout);
+
         } else if (id == R.id.nav_sale) {
+            changTab(R.layout.activity_sale,layout);
 
         } else if (id == R.id.nav_food) {
             changTab(R.layout.activity_food,layout);
@@ -117,10 +113,16 @@ public class MainActivity extends AppCompatActivity
             changTab(R.layout.activity_environment,layout);
 
         } else if (id == R.id.nav_finance) {
+            changTab(R.layout.activity_finance,layout);
 
         } else if (id == R.id.nav_report) {
+            changTab(R.layout.activity_report,layout);
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_notification) {
+            changTab(R.layout.activity_notification,layout);
+
+        }
+        else if (id == R.id.nav_logout) {
             session.clear();
             PageChange.toLoginActivity(this);
         }
