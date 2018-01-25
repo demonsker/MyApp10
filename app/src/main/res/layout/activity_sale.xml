@@ -45,11 +45,13 @@
         <Button
             android:id="@+id/button14"
             android:layout_width="wrap_content"
+            android:layout_height="45dp"
             android:layout_alignStart="@+id/editText"
             android:layout_below="@+id/editText"
             android:layout_marginStart="88dp"
             android:layout_marginTop="20dp"
-            android:text="Button" />
+            android:text="Button"
+            android:visibility="invisible" />
 
         <EditText
             android:id="@+id/editText2"

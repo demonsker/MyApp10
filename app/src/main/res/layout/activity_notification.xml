@@ -28,7 +28,8 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="vertical" />
+                android:orientation="vertical"
+                android:id="@+id/linearLayout" />
 
             <ImageView
                 android:id="@+id/imageView6"
@@ -64,15 +65,14 @@
                 android:id="@+id/button8"
                 android:layout_width="300dp"
                 android:layout_height="45dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignParentTop="true"
                 android:layout_marginTop="47dp"
-                android:layout_toEndOf="@+id/imageView6"
                 android:background="@android:color/background_light"
                 android:backgroundTint="@android:color/background_light"
                 android:text="     แจ้งเตือนอาหาร"
                 android:textAlignment="viewStart"
-                android:textSize="14sp" />
+                android:textSize="14sp"
+                android:layout_below="@+id/linearLayout"
+                android:layout_alignParentEnd="true" />
 
             <Button
                 android:id="@+id/button6"
@@ -95,7 +95,7 @@
                 android:layout_below="@+id/button8"
                 android:layout_toEndOf="@+id/imageView6"
                 android:background="@android:color/darker_gray"
-                android:backgroundTint="?android:attr/colorControlHighlight"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     แจ้งเตือนการพยาบาล"
                 android:textAlignment="viewStart"
                 android:textSize="14sp" />
@@ -106,8 +106,7 @@
                 android:layout_height="20dp"
                 android:layout_alignEnd="@+id/imageView6"
                 android:layout_below="@+id/imageView8"
-                android:background="@android:drawable/ic_notification_overlay"
-                android:backgroundTint="@android:drawable/ic_notification_overlay"
+                android:background="@mipmap/ic_noti2"
                 android:text="2"
                 android:textColor="@android:color/background_light" />
 
@@ -117,8 +116,7 @@
                 android:layout_height="20dp"
                 android:layout_below="@+id/imageView6"
                 android:layout_toStartOf="@+id/button6"
-                android:background="@android:drawable/ic_notification_overlay"
-                android:backgroundTint="@android:drawable/ic_notification_overlay"
+                android:background="@mipmap/ic_noti2"
                 android:text="2"
                 android:textColor="@android:color/background_light" />
 
@@ -128,8 +126,7 @@
                 android:layout_height="20dp"
                 android:layout_alignTop="@+id/imageView8"
                 android:layout_toStartOf="@+id/button8"
-                android:background="@android:drawable/ic_notification_overlay"
-                android:backgroundTint="@android:drawable/ic_notification_overlay"
+                android:background="@mipmap/ic_noti2"
                 android:text="1"
                 android:textColor="@android:color/background_light" />
 
@@ -140,11 +137,11 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/imageView7"
                 android:layout_toStartOf="@+id/button21"
-                android:background="@android:color/darker_gray"
-                android:backgroundTint="@android:color/darker_gray"
+                android:background="@color/colorPrimary"
+                android:backgroundTint="@color/colorPrimary"
                 android:text="  การแจ้งเตือนทั้งหมด                                         "
                 android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
+                android:textColor="@android:color/background_light"
                 android:textStyle="bold" />
 
             <Button
@@ -153,7 +150,7 @@
                 android:layout_height="30dp"
                 android:layout_alignBottom="@+id/button19"
                 android:layout_alignParentEnd="true"
-                android:background="@android:color/darker_gray"
+                android:background="@color/colorPrimary"
                 android:text="ยังไม่ได้อ่าน(5)"
                 android:textColor="@android:color/holo_red_dark"
                 android:textStyle="bold" />
@@ -165,7 +162,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button28"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?attr/colorControlHighlight"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     หมายเลขการสั่งซื้อที่ 11011802 รอการชำรเงิน"
                 android:textAlignment="viewStart" />
 
@@ -176,8 +173,8 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button27"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorBackgroundFloating"
-                android:text="     หมายเลขการสั่งซื้อที่ 11011802 ชำระเงินแล้ว"
+                android:backgroundTint="@android:color/background_light"
+                android:text="     มีสุกรพร้อมขาย 2 ตัว"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
                 android:textSize="16sp"
@@ -190,7 +187,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button25"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorControlHighlight"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     มีสุกร 5 ตัวรอการถ่ายพยาธิ"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
@@ -204,7 +201,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button24"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorControlHighlight"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     สุกรในกรงเลขที่ 02013 มีอัตราการเติบโตผิดปกติ"
                 android:textAlignment="viewStart" />
 
@@ -215,7 +212,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button26"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorBackgroundFloating"
+                android:backgroundTint="@android:color/background_light"
                 android:text="     มีสุกรพร้อมขาย 5 ตัว"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
@@ -229,7 +226,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button23"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorBackground"
+                android:backgroundTint="@android:color/background_light"
                 android:text="     ถังอาหารเลขที่ 01005 ต้องการเปลี่ยนสูตรอาหาร"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
@@ -244,7 +241,7 @@
                 android:layout_alignParentStart="true"
                 android:layout_below="@+id/button19"
                 android:background="@android:color/background_light"
-                android:backgroundTint="?android:attr/colorControlHighlight"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     มีสุกร 20 รอการฉีดวัคซีน"
                 android:textAlignment="viewStart"
                 android:textColor="@color/colorPrimary"
