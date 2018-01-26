@@ -1,9 +1,6 @@
 package com.example.happypig.myapplication;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -18,7 +15,7 @@ import android.widget.Toast;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
-import com.example.happypig.myapplication.controllers.Action;
+import com.example.happypig.myapplication.Utilities.Action;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
