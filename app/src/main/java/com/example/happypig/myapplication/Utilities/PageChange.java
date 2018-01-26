@@ -47,4 +47,10 @@ public class PageChange {
         return true;
     }
 
+    public static boolean toSubMainActivity(AppCompatActivity page){
+        Intent intentdoor = new Intent(page.getBaseContext(), SubMainActivity.class);
+        page.startActivity(intentdoor);
+        return true;
+    }
+
 }

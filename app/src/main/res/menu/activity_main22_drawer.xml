@@ -9,20 +9,24 @@
             android:icon="@drawable/ic_home_black_24dp"
             android:title="หน้าหลัก" />
         <item
-            android:id="@+id/nav_sale"
-            android:icon="@mipmap/ic_sale"
-            android:title="ขาย" />
+            android:id="@+id/nav_environment"
+            android:enabled="true"
+            android:icon="@mipmap/ic_environment"
+            android:title="สภาพแวดล้อม" />
         <item
             android:id="@+id/nav_food"
             android:enabled="true"
             android:icon="@mipmap/ic_food"
             android:title="อาหาร" />
         <item
-            android:id="@+id/nav_environment"
-            android:enabled="true"
-            android:icon="@mipmap/ic_environment"
-            android:title="สภาพแวดล้อม" />
-
+            android:id="@+id/nav_notification"
+            android:icon="@drawable/ic_notifications_black_24dp"
+            android:title="การแจ้งเตือน                            5"
+            android:visible="true" />
+        <item
+            android:id="@+id/nav_sale"
+            android:icon="@mipmap/ic_sale"
+            android:title="ขาย" />
         <item
             android:id="@+id/nav_finance"
             android:enabled="true"
@@ -32,11 +36,7 @@
             android:id="@+id/nav_report"
             android:icon="@mipmap/ic_report"
             android:title="รายงาน" />
-        <item
-            android:id="@+id/nav_notification"
-            android:icon="@drawable/ic_notifications_black_24dp"
-            android:title="การแจ้งเตือน"
-            android:visible="true" />
+
 
     </group>
 

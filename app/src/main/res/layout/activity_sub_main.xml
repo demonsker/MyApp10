@@ -4,96 +4,96 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.happypig.myapplication.SubMainActivity">
+    tools:context="com.example.happypig.myapplication.FoodActivity">
 
-    <ScrollView
+    <android.support.design.widget.AppBarLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+    </android.support.design.widget.AppBarLayout>
 
-        <LinearLayout
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:layout_height="628dp">
 
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="628dp">
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:background="@android:color/darker_gray"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_menu_gallery"
+                android:layout_marginEnd="22dp"
+                android:layout_alignTop="@+id/imageView2"
+                android:layout_alignParentEnd="true" />
 
-                <ImageView
-                    android:id="@+id/imageView4"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignStart="@+id/spinner5"
-                    android:layout_alignTop="@+id/imageView2"
-                    android:layout_marginStart="19dp"
-                    android:background="@android:color/darker_gray"
-                    android:scaleType="center"
-                    app:srcCompat="@drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/imageView3"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_alignStart="@+id/pigstyName3"
+                android:layout_below="@+id/pigstyName3"
+                android:layout_marginTop="27dp"
+                android:background="@android:color/darker_gray"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_menu_gallery" />
 
-                <ImageView
-                    android:id="@+id/imageView3"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_alignStart="@+id/pigstyName3"
-                    android:layout_below="@+id/pigstyName3"
-                    android:layout_marginTop="27dp"
-                    android:background="@android:color/darker_gray"
-                    android:scaleType="center"
-                    app:srcCompat="@drawable/ic_menu_gallery" />
+            <Spinner
+                android:id="@+id/spinner5"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="29dp"
+                android:entries="@array/pigInformation"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true" />
 
-                <Spinner
-                    android:id="@+id/spinner5"
-                    android:layout_width="200dp"
-                    android:layout_height="wrap_content"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentTop="true"
-                    android:entries="@array/pigInformation" />
+            <Button
+                android:id="@+id/pigstyName4"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/imageView3"
+                android:layout_alignStart="@+id/imageView3"
+                android:background="?android:attr/colorForeground"
+                android:text="โรงเรือนที่ 3"
+                android:textColor="@android:color/background_light" />
 
-                <Button
-                    android:id="@+id/pigstyName4"
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/imageView3"
-                    android:layout_alignStart="@+id/imageView3"
-                    android:background="?android:attr/colorForeground"
-                    android:text="โรงเรือนที่ 3"
-                    android:textColor="@android:color/background_light" />
+            <Button
+                android:id="@+id/pigstyName3"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/imageView2"
+                android:layout_alignStart="@+id/imageView2"
+                android:background="@android:color/background_dark"
+                android:text="โรงเรือนที่ 1"
+                android:textColor="@android:color/background_light" />
 
-                <Button
-                    android:id="@+id/pigstyName3"
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/imageView2"
-                    android:layout_alignStart="@+id/imageView2"
-                    android:background="@android:color/background_dark"
-                    android:text="โรงเรือนที่ 1"
-                    android:textColor="@android:color/background_light" />
+            <Button
+                android:id="@+id/pigstyName"
+                android:layout_width="150dp"
+                android:layout_height="30dp"
+                android:layout_alignBottom="@+id/imageView4"
+                android:layout_alignStart="@+id/imageView4"
+                android:background="?android:attr/colorForeground"
+                android:text="โรงเรือนที่ 2"
+                android:textColor="@android:color/background_light" />
 
-                <Button
-                    android:id="@+id/pigstyName"
-                    android:layout_width="150dp"
-                    android:layout_height="30dp"
-                    android:layout_alignBottom="@+id/imageView4"
-                    android:layout_alignStart="@+id/imageView4"
-                    android:background="?android:attr/colorForeground"
-                    android:text="โรงเรือนที่ 2"
-                    android:textColor="@android:color/background_light" />
+            <ImageView
+                android:id="@+id/imageView2"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="44dp"
+                android:background="@android:color/darker_gray"
+                android:scaleType="center"
+                app:srcCompat="@drawable/ic_menu_gallery"
+                android:layout_below="@+id/spinner5"
+                android:layout_toStartOf="@+id/imageView4"
+                android:layout_marginEnd="36dp" />
 
-                <ImageView
-                    android:id="@+id/imageView2"
-                    android:layout_width="150dp"
-                    android:layout_height="150dp"
-                    android:layout_below="@+id/spinner5"
-                    android:layout_marginEnd="13dp"
-                    android:layout_marginTop="52dp"
-                    android:layout_toStartOf="@+id/spinner5"
-                    android:background="@android:color/darker_gray"
-                    android:scaleType="center"
-                    app:srcCompat="@drawable/ic_menu_gallery" />
-
-            </RelativeLayout>
-        </LinearLayout>
-    </ScrollView>
-
-
+        </RelativeLayout>
+    </LinearLayout>
 </android.support.design.widget.CoordinatorLayout>

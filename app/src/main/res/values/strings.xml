@@ -50,6 +50,15 @@
 
     </string-array>
 
+    <string-array name="pigSelect">
+
+        <item>สุกรพร้อมขาย</item>
+        <item>เลือกเอง</item>
+        <item>เลือกทั้งหมด</item>
+
+    </string-array>
+
+
     <string name="action_settings">Settings</string>
 
     <string name="title_home">หน้าหลัก</string>
@@ -69,6 +78,9 @@
     <string name="title_activity_pigsty">PigstyActivity</string>
     <string name="title_activity_home_app">HomeAppActivity</string>
     <string name="title_activity_sub_main">SubMainActivity</string>
+    <string name="title_activity_sale">SaleActivity</string>
+    <string name="title_activity_report">ReportActivity</string>
+    <string name="title_activity_finance">FinanceActivity</string>
 
 
 </resources>

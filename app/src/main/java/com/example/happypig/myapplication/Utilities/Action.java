@@ -1,4 +1,4 @@
-package com.example.happypig.myapplication.controllers;
+package com.example.happypig.myapplication.Utilities;
 
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;

@@ -1,7 +1,5 @@
 package com.example.happypig.myapplication;
 
-import android.content.Intent;
-import android.graphics.pdf.PdfDocument;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -10,7 +8,7 @@ import android.widget.Toast;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
-import com.example.happypig.myapplication.controllers.Action;
+import com.example.happypig.myapplication.Utilities.Action;
 
 public class PINActivity extends AppCompatActivity {
 

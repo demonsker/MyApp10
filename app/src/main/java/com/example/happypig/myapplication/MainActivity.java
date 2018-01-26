@@ -1,11 +1,6 @@
 package com.example.happypig.myapplication;
 
-import android.content.Context;
-import android.content.Intent;
 import android.os.Bundle;
-import android.support.design.widget.FloatingActionButton;
-import android.support.design.widget.Snackbar;
-import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -20,13 +15,14 @@ import android.widget.Toast;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
-import com.example.happypig.myapplication.controllers.Action;
+import com.example.happypig.myapplication.Utilities.Action;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
     Session session;
     RelativeLayout layout;
+
     private int exit;
 
     @Override
@@ -35,15 +31,6 @@ public class MainActivity extends AppCompatActivity
         setContentView(R.layout.activity_main);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-
-        FloatingActionButton fab = (FloatingActionButton) findViewById(R.id.fab);
-        fab.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Intent intentdoor = new Intent(getBaseContext(), AddActivity.class);
-                startActivity(intentdoor);
-            }
-        });
 
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
@@ -62,6 +49,9 @@ public class MainActivity extends AppCompatActivity
         }
 
         exit = 1;
+
+        changTab(R.layout.activity_sub_main,layout);
+
     }
 
     @Override
@@ -108,9 +98,10 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            layout.removeAllViews();
+            changTab(R.layout.activity_sub_main,layout);
 
         } else if (id == R.id.nav_sale) {
+            changTab(R.layout.activity_sale,layout);
 
         } else if (id == R.id.nav_food) {
             changTab(R.layout.activity_food,layout);
@@ -119,10 +110,16 @@ public class MainActivity extends AppCompatActivity
             changTab(R.layout.activity_environment,layout);
 
         } else if (id == R.id.nav_finance) {
+            changTab(R.layout.activity_finance,layout);
 
         } else if (id == R.id.nav_report) {
+            changTab(R.layout.activity_report,layout);
 
-        } else if (id == R.id.nav_logout) {
+        } else if (id == R.id.nav_notification) {
+            changTab(R.layout.activity_notification,layout);
+
+        }
+        else if (id == R.id.nav_logout) {
             session.clear();
             PageChange.toLoginActivity(this);
         }
@@ -137,7 +134,5 @@ public class MainActivity extends AppCompatActivity
         View content = getLayoutInflater().inflate(activity, layout, false);
         layout.addView(content);
     }
-
-
 
 }

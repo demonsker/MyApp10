@@ -60,6 +60,18 @@
         <activity
             android:name=".SubMainActivity"
             android:label="@string/title_activity_sub_main"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".SaleActivity"
+            android:label="@string/title_activity_sale"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".ReportActivity"
+            android:label="@string/title_activity_report"
+            android:theme="@style/AppTheme.NoActionBar" />
+        <activity
+            android:name=".FinanceActivity"
+            android:label="@string/title_activity_finance"
             android:theme="@style/AppTheme.NoActionBar"></activity>
     </application>
 
