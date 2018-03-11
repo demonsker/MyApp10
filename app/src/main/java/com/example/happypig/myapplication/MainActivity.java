@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -133,6 +135,8 @@ public class MainActivity extends AppCompatActivity
         layout.removeAllViews();
         View content = getLayoutInflater().inflate(activity, layout, false);
         layout.addView(content);
+        if(activity == R.layout.activity_sub_main)
+            SubMainActivity.run(this);
     }
 
 }
