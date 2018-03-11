@@ -54,14 +54,11 @@ public class LoginActivity extends AppCompatActivity {
 
     public void loginClick (View v)
     {
-        //BackDoor
-        //if(PageChange.toPINActivity(this))
-           // return;
-
         String usr = userName.getText().toString();
         String pwd = password.getText().toString();
 
-        Farm farm = Action.login(usr,pwd);
+        Farm farm = new Farm("123456", "PrayutFarm", "088952652", "a@a.com", "1234", "1234");
+        //Farm farm = Action.login(usr,pwd);
 
         if(!farm.toString().equals("")) {
             session.setId(farm.getId());
