@@ -136,7 +136,7 @@ public class MainActivity extends AppCompatActivity
         View content = getLayoutInflater().inflate(activity, layout, false);
         layout.addView(content);
         if(activity == R.layout.activity_sub_main)
-            SubMainActivity.run(this);
+            SubMainActivity.addController(this);
     }
 
 }

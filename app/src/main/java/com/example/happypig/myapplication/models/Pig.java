@@ -7,7 +7,13 @@ package com.example.happypig.myapplication.models;
 public class Pig {
 
     private String id;
+
     private String name;
+
+    public Pig(String id, String name) {
+        this.id = id;
+        this.name = name;
+    }
 
     public String getId() {
         return id;
@@ -17,4 +23,11 @@ public class Pig {
         this.id = id;
     }
 
+    public String getName() {
+        return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
+    }
 }
