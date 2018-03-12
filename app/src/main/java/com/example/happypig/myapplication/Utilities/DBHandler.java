@@ -30,6 +30,28 @@ import java.util.List;
 
 public class DBHandler {
 
+    public Farm login(List<NameValuePair> params) {
+        String url = "http://192.168.1.5/login.php";
+
+        String resultServer = getHttpPost(url, params);
+        JSONObject c;
+        Farm farm = new Farm();
+
+        try {
+            c = new JSONObject(resultServer);
+            farm.setId(c.getString("id"));
+            farm.setName(c.getString("name"));
+            farm.setTel(c.getString("tel"));
+            farm.setEmail(c.getString("email"));
+            farm.setPassword(c.getString("password"));
+            farm.setPinOwn(c.getString("pinOwn"));
+        } catch (JSONException e) {
+            e.printStackTrace();
+        }
+
+        return farm;
+    }
+
     public  int insertFarm(List<NameValuePair> params){
         String url = "http://192.168.1.5/register.php";
 
@@ -51,26 +73,25 @@ public class DBHandler {
             return 0;
     }
 
-    public Farm selectFarm(List<NameValuePair> params) {
-        String url = "http://192.168.1.5/login.php";
+    public ArrayList<Farm> selectFarm(List<NameValuePair> params) {
+        String url = "http://192.168.1.5/selectfarm.php";
 
         String resultServer = getHttpPost(url, params);
         JSONObject c;
+
+        ArrayList<Farm> farmList = new ArrayList<Farm>();
         Farm farm = new Farm();
 
         try {
             c = new JSONObject(resultServer);
-            farm.setId(c.getString("id"));
-            farm.setName(c.getString("name"));
-            farm.setTel(c.getString("tel"));
-            farm.setEmail(c.getString("email"));
-            farm.setPassword(c.getString("password"));
-            farm.setPinOwn(c.getString("pinOwn"));
+
+            //TODO Select many farm from JSON
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-        return farm;
+        return farmList;
     }
 
     public String getHttpPost(String url,List<NameValuePair> params) {

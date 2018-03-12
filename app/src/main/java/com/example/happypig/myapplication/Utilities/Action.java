@@ -26,7 +26,7 @@ public class Action {
         params.add(new BasicNameValuePair("strUser", username));
         params.add(new BasicNameValuePair("strPass", password));
 
-        return handler.selectFarm(params);
+        return handler.login(params);
     }
 
     public static int register(Farm farm){
