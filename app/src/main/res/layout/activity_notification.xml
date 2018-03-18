@@ -110,7 +110,8 @@
                 android:layout_below="@+id/imageView8"
                 android:background="@mipmap/ic_noti2"
                 android:text="2"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/button15"
@@ -120,7 +121,8 @@
                 android:layout_toStartOf="@+id/button6"
                 android:background="@mipmap/ic_noti2"
                 android:text="2"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/button20"
@@ -130,7 +132,8 @@
                 android:layout_alignTop="@+id/imageView8"
                 android:background="@mipmap/ic_noti2"
                 android:text="1"
-                android:textColor="@android:color/background_light" />
+                android:textColor="@android:color/background_light"
+                android:visibility="gone" />
 
             <Button
                 android:id="@+id/button19"
@@ -144,7 +147,8 @@
                 android:text="  การแจ้งเตือนทั้งหมด                                         "
                 android:textAlignment="viewStart"
                 android:textColor="@android:color/background_light"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:layout_alignParentEnd="true" />
 
             <Button
                 android:id="@+id/button21"
@@ -155,100 +159,8 @@
                 android:background="@color/colorPrimaryDark"
                 android:text="ยังไม่ได้อ่าน(5)"
                 android:textColor="@android:color/holo_red_light"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button22"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button28"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/darker_gray"
-                android:text="     หมายเลขการสั่งซื้อที่ 11011802 รอการชำรเงิน"
-                android:textAlignment="viewStart" />
-
-            <Button
-                android:id="@+id/button28"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button27"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/background_light"
-                android:text="     มีสุกรพร้อมขาย 2 ตัว"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button27"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button25"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/darker_gray"
-                android:text="     มีสุกร 5 ตัวรอการถ่ายพยาธิ"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button26"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button24"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/darker_gray"
-                android:text="     สุกรในกรงเลขที่ 02013 มีอัตราการเติบโตผิดปกติ"
-                android:textAlignment="viewStart" />
-
-            <Button
-                android:id="@+id/button25"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button26"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/background_light"
-                android:text="     มีสุกรพร้อมขาย 5 ตัว"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button24"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button23"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/background_light"
-                android:text="     ถังอาหารเลขที่ 01005 ต้องการเปลี่ยนสูตรอาหาร"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button23"
-                style="@android:style/Widget.Material.Light.Button.Small"
-                android:layout_width="400dp"
-                android:layout_height="50dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/button19"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/darker_gray"
-                android:text="     มีสุกร 20 รอการฉีดวัคซีน"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_dark"
-                android:textSize="16sp"
-                android:textStyle="bold" />
+                android:textStyle="bold"
+                android:visibility="gone" />
 
         </RelativeLayout>
     </ScrollView>
