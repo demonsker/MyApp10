@@ -139,6 +139,8 @@ public class MainActivity extends AppCompatActivity
             SubMainActivity.addController(this);
         else if(activity == R.layout.activity_food)
             FoodActivity.addController(this);
+        else if(activity == R.layout.activity_finance)
+            FinanceActivity.addController(this);
     }
 
 }
