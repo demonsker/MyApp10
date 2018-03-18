@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 
+import com.example.happypig.myapplication.Utilities.PageChange;
+import com.example.happypig.myapplication.Utilities.PigDataSender;
 import com.example.happypig.myapplication.models.Pig;
 
 import java.util.ArrayList;
@@ -20,6 +22,7 @@ public class SubMainActivity extends AppCompatActivity {
     static EditText pigSearch;
     static ListView listview;
     static AppCompatActivity appContext;
+    static PigDataSender pigSender;
 
     static String[] pigArray;
     static ArrayAdapter<String> arrayAdapter;
@@ -35,6 +38,7 @@ public class SubMainActivity extends AppCompatActivity {
 
     private static void mapLayout(AppCompatActivity app){
         appContext = app;
+        pigSender = new PigDataSender(appContext);
         button = (Button) app.findViewById(R.id.testButton);
         pigSearch = (EditText) app.findViewById(R.id.pigsearch);
         listview = (ListView) app.findViewById(R.id.listview1);
@@ -76,7 +80,8 @@ public class SubMainActivity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                System.out.println(pigArray[position]);
+                pigSender.setName(pigArray[position]);
+                PageChange.toPigstyActivity(appContext);
             }
         });
 

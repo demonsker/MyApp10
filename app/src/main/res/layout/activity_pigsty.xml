@@ -101,19 +101,6 @@
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/ic_menu_camera" />
 
-            <Button
-                android:id="@+id/button33"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView27"
-                android:layout_alignEnd="@+id/imageView9"
-                android:layout_alignStart="@+id/imageView9"
-                android:layout_below="@+id/imageView9"
-                android:background="@android:color/background_dark"
-                android:backgroundTint="@android:color/background_dark"
-                android:text="ชื่อ : ไม่มีชื่อ"
-                android:textColor="@android:color/background_light" />
-
             <TextView
                 android:id="@+id/textView51"
                 android:layout_width="wrap_content"
@@ -259,7 +246,7 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button29"
+                android:id="@+id/pigname"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
                 android:layout_above="@+id/textView27"
