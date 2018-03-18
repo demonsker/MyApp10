@@ -9,53 +9,45 @@ import android.util.Log;
 import io.netpie.microgear.Microgear;
 import io.netpie.microgear.MicrogearEventListener;
 
-public class NETPIE {
+public  class NETPIE {
 
-    private String appid;
-    private String key;
-    private String secret;
-    private String alias;
-    private Microgear microgear;
-    private MicrogearCallBack callback;
-    private Handler handler;
+    private static String appid;
+    private static String key;
+    private static String secret;
+    private static String alias;
+    private static Microgear microgear;
+    private static MicrogearCallBack callback;
+    private static Handler handler;
 
-    public NETPIE(String appid, String key, String secret){
-        this.appid = appid;
-        this.key = key;
-        this.secret = secret;
+    public static void init(String _appid, String _key, String _secret){
+        appid = _appid;
+        key = _key;
+        secret = _secret;
         callback = new MicrogearCallBack();
     }
 
-    public void setContext(AppCompatActivity context){
-        this.microgear = new Microgear(context);
+    public static void setContext(AppCompatActivity context){
+        microgear = new Microgear(context);
     }
 
-    public void setHandler(Handler handler){
-        this.handler = handler;
+    public static void setHandler(Handler _handler){
+        handler = _handler;
     }
 
-    public void setAlias(String alias){
-        this.alias = alias;
+    public static void setAlias(String _alias){
+        alias = _alias;
     }
 
-    public void connect(){
+    public static void connect(){
         microgear.connect(appid,key,secret,alias);
         microgear.setCallback(callback);
     }
 
-    public void sendMessage(String target, String message){
+    public static void sendMessage(String target, String message){
         microgear.chat(target, message);
     }
 
-    protected void onDestroy() {
-        microgear.disconnect();
-    }
-
-    protected void onResume() {
-        microgear.bindServiceResume();
-    }
-
-    class MicrogearCallBack implements MicrogearEventListener {
+    static class MicrogearCallBack implements MicrogearEventListener {
         @Override
         public void onConnect() {
             Log.i("Connected","Now I'm connected with netpie");
