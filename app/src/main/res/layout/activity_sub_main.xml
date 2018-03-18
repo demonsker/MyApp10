@@ -10,30 +10,34 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <Spinner
-            android:id="@+id/spinner5"
-            android:layout_width="200dp"
+        <EditText
+            android:id="@+id/pigsearch"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
             android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="29dp"
-            android:entries="@array/pigInformation" />
+            android:layout_marginEnd="67dp"
+            android:layout_marginTop="19dp"
+            android:ems="10"
+            android:hint="pig search"
+            android:inputType="textPersonName" />
 
         <ListView
             android:id="@+id/listview1"
             android:layout_width="match_parent"
             android:layout_height="500dp"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/spinner5"
-            android:layout_marginTop="13dp" />
+            android:layout_below="@+id/pigsearch"
+            android:layout_marginTop="19dp" />
 
         <Button
             android:id="@+id/testButton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_toStartOf="@+id/spinner5"
-            android:text="Button" />
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignBottom="@+id/pigsearch"
+            android:layout_marginEnd="14dp"
+            android:layout_toStartOf="@+id/pigsearch"
+            android:text="S" />
 
     </RelativeLayout>
 
