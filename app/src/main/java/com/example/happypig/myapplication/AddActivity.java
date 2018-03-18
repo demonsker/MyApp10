@@ -11,15 +11,12 @@ import android.widget.DatePicker;
 
 public class AddActivity extends AppCompatActivity {
 
-    DatePicker calender;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_singleadd);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        calender = (DatePicker) findViewById(R.id.datePicker);
     }
 
 
@@ -31,7 +28,6 @@ public class AddActivity extends AppCompatActivity {
             InputMethodManager imm = (InputMethodManager) getSystemService(Context.INPUT_METHOD_SERVICE);
             imm.hideSoftInputFromWindow(view.getWindowToken(), 0);
         }
-        calender.setVisibility(1);
     }
 
     public  void  onBackClick (View v)

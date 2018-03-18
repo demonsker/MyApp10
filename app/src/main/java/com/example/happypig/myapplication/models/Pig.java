@@ -1,10 +1,12 @@
 package com.example.happypig.myapplication.models;
 
+import java.io.Serializable;
+
 /**
  * Created by Eucliwood on 13-Mar-18.
  */
 
-public class Pig {
+public class Pig implements Serializable {
 
     private String id;
 

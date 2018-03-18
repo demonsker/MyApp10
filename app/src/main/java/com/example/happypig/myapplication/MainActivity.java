@@ -137,6 +137,10 @@ public class MainActivity extends AppCompatActivity
         layout.addView(content);
         if(activity == R.layout.activity_sub_main)
             SubMainActivity.addController(this);
+        else if(activity == R.layout.activity_food)
+            FoodActivity.addController(this);
+        else if(activity == R.layout.activity_finance)
+            FinanceActivity.addController(this);
     }
 
 }
