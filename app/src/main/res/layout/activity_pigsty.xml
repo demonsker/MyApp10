@@ -14,6 +14,16 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/toolbar2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_alignParentStart="true"
+                android:background="?attr/colorPrimary"
+                android:minHeight="?attr/actionBarSize"
+                android:theme="?attr/actionBarTheme" />
+
             <TextView
                 android:id="@+id/textView45"
                 android:layout_width="wrap_content"
@@ -183,28 +193,6 @@
                 android:scaleType="centerInside"
                 app:srcCompat="@drawable/ic_menu_camera" />
 
-            <ImageView
-                android:id="@+id/imageView12"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignStart="@+id/button33"
-                android:layout_below="@+id/button18"
-                android:layout_marginTop="17dp"
-                android:background="@android:color/darker_gray"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_menu_camera" />
-
-            <ImageView
-                android:id="@+id/imageView14"
-                android:layout_width="100dp"
-                android:layout_height="100dp"
-                android:layout_alignStart="@+id/imageView12"
-                android:layout_below="@+id/button37"
-                android:layout_marginTop="20dp"
-                android:background="@android:color/darker_gray"
-                android:scaleType="centerInside"
-                app:srcCompat="@drawable/ic_menu_camera" />
-
             <TextView
                 android:id="@+id/textView21"
                 android:layout_width="wrap_content"
@@ -217,33 +205,12 @@
                 android:textStyle="bold" />
 
             <TextView
-                android:id="@+id/textView56"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView47"
-                android:layout_alignTop="@+id/imageView12"
-                android:text="อายุ :"
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
                 android:id="@+id/textView22"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_alignStart="@+id/textView21"
                 android:layout_below="@+id/textView21"
                 android:layout_marginTop="9dp"
-                android:text="น้ำหนัก : "
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView57"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView56"
-                android:layout_below="@+id/textView56"
-                android:layout_marginTop="7dp"
                 android:text="น้ำหนัก : "
                 android:textColor="@android:color/background_dark"
                 android:textStyle="bold" />
@@ -292,36 +259,6 @@
                 android:textStyle="bold" />
 
             <Button
-                android:id="@+id/button18"
-                android:layout_width="400dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView27"
-                android:layout_marginTop="18dp"
-                android:background="?attr/actionModeSplitBackground"
-                android:backgroundTint="?attr/actionModeSplitBackground"
-                android:text="     หมายเลขกรง : 01002"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <Button
-                android:id="@+id/button37"
-                android:layout_width="400dp"
-                android:layout_height="45dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/textView63"
-                android:layout_marginTop="20dp"
-                android:background="?attr/actionModeSplitBackground"
-                android:backgroundTint="?attr/actionModeSplitBackground"
-                android:text="     หมายเลขกรง : 01003"
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp"
-                android:textStyle="bold" />
-
-            <Button
                 android:id="@+id/button29"
                 android:layout_width="wrap_content"
                 android:layout_height="20dp"
@@ -329,19 +266,6 @@
                 android:layout_alignEnd="@+id/imageView9"
                 android:layout_alignStart="@+id/imageView9"
                 android:layout_below="@+id/imageView9"
-                android:background="@android:color/background_dark"
-                android:backgroundTint="@android:color/background_dark"
-                android:text="ชื่อ : ไม่มีชื่อ"
-                android:textColor="@android:color/background_light" />
-
-            <Button
-                android:id="@+id/button35"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_alignBottom="@+id/imageView12"
-                android:layout_alignEnd="@+id/imageView12"
-                android:layout_alignStart="@+id/imageView12"
-                android:layout_toStartOf="@+id/textView47"
                 android:background="@android:color/background_dark"
                 android:backgroundTint="@android:color/background_dark"
                 android:text="ชื่อ : ไม่มีชื่อ"
@@ -401,99 +325,6 @@
                 android:text="ดูรายละเอียด"
                 android:textColor="@android:color/background_light" />
 
-            <TextView
-                android:id="@+id/textView60"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView57"
-                android:layout_below="@+id/textView57"
-                android:layout_marginTop="7dp"
-                android:text="อัตราการเติบโต :"
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView61"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView60"
-                android:layout_below="@+id/textView60"
-                android:layout_marginTop="8dp"
-                android:text="ปริมาณโปรตีนที่ต้องได้รับ :"
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView62"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView61"
-                android:layout_below="@+id/imageView12"
-                android:text="วัคซีนที่ต้องฉีด :"
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView63"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView62"
-                android:layout_below="@+id/textView62"
-                android:layout_marginTop="11dp"
-                android:text="พร้อมขายใน :"
-                android:textColor="@android:color/background_dark"
-                android:textStyle="bold" />
-
-            <TextView
-                android:id="@+id/textView64"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_above="@+id/textView57"
-                android:layout_alignStart="@+id/textView55"
-                android:text="20 วัน" />
-
-            <TextView
-                android:id="@+id/textView65"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView64"
-                android:layout_alignTop="@+id/textView57"
-                android:text="17 กก." />
-
-            <TextView
-                android:id="@+id/textView66"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignEnd="@+id/textView65"
-                android:layout_alignTop="@+id/textView60"
-                android:text="ปกติ" />
-
-            <TextView
-                android:id="@+id/textView67"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignStart="@+id/textView66"
-                android:layout_alignTop="@+id/textView61"
-                android:text="30 %" />
-
-            <Button
-                android:id="@+id/button36"
-                android:layout_width="wrap_content"
-                android:layout_height="20dp"
-                android:layout_alignBottom="@+id/textView62"
-                android:layout_alignEnd="@+id/textView67"
-                android:background="@android:color/holo_red_dark"
-                android:backgroundTint="@android:color/holo_red_dark"
-                android:text="ดูรายละเอียด"
-                android:textColor="@android:color/background_light" />
-
-            <TextView
-                android:id="@+id/textView68"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_alignBottom="@+id/textView63"
-                android:layout_alignStart="@+id/textView67"
-                android:text="100 วัน" />
         </RelativeLayout>
     </ScrollView>
 
