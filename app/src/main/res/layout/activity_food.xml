@@ -39,7 +39,7 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-                        android:layout_below="@+id/imageView5"
+                        android:layout_below="@+id/foodbalanceimage"
                         android:layout_marginStart="50dp"
                         android:layout_marginTop="26dp"
                         android:text="เลือกโรงเรือน :"
@@ -56,7 +56,7 @@
                         android:entries="@array/foodInformation" />
 
                     <ImageView
-                        android:id="@+id/imageView5"
+                        android:id="@+id/foodbalanceimage"
                         android:layout_width="200dp"
                         android:layout_height="200dp"
                         android:layout_alignParentTop="true"
@@ -129,7 +129,7 @@
                         android:textSize="18sp" />
 
                     <Button
-                        android:id="@+id/button5"
+                        android:id="@+id/viewfooddetail"
                         android:layout_width="160dp"
                         android:layout_height="50dp"
                         android:layout_below="@+id/textView14"
