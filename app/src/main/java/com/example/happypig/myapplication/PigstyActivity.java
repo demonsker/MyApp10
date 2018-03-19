@@ -5,14 +5,12 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.widget.Button;
 
-import com.example.happypig.myapplication.Utilities.PigDataSender;
+import com.example.happypig.myapplication.models.Pig;
 
 
 public class PigstyActivity extends AppCompatActivity {
 
     Button pigName;
-
-    PigDataSender pigSender;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,9 +20,9 @@ public class PigstyActivity extends AppCompatActivity {
         setSupportActionBar(toolbar);
 
         pigName = (Button) findViewById(R.id.pigname);
-        pigSender = new PigDataSender(getApplicationContext());
 
-        pigName.setText("ชื่อ : "+pigSender.getName());
+        Pig pig = (Pig)(getIntent().getSerializableExtra("Pig"));
+        pigName.setText("ชื่อ : "+pig.getName());
     }
 
 }
