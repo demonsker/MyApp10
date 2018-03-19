@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 
 import com.example.happypig.myapplication.*;
+import com.example.happypig.myapplication.models.Pig;
 
 /**
  * Created by Yhingkai on 12/12/2017.
@@ -31,6 +32,13 @@ public class PageChange {
 
     public static boolean toPigstyActivity(AppCompatActivity page){
         Intent intentdoor = new Intent(page.getBaseContext(), PigstyActivity.class);
+        page.startActivity(intentdoor);
+        return true;
+    }
+
+    public static boolean toPigstyActivity(AppCompatActivity page, Pig pig){
+        Intent intentdoor = new Intent(page.getBaseContext(), PigstyActivity.class);
+        intentdoor.putExtra("Pig", pig);
         page.startActivity(intentdoor);
         return true;
     }

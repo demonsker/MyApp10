@@ -11,7 +11,6 @@ import android.widget.EditText;
 import android.widget.ListView;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
-import com.example.happypig.myapplication.Utilities.PigDataSender;
 import com.example.happypig.myapplication.models.Pig;
 
 import java.util.ArrayList;
@@ -22,10 +21,10 @@ public class SubMainActivity extends AppCompatActivity {
     static EditText pigSearch;
     static ListView listview;
     static AppCompatActivity appContext;
-    static PigDataSender pigSender;
 
     static String[] pigArray;
     static ArrayAdapter<String> arrayAdapter;
+    static ArrayList<Pig> pigList;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,7 +37,6 @@ public class SubMainActivity extends AppCompatActivity {
 
     private static void mapLayout(AppCompatActivity app){
         appContext = app;
-        pigSender = new PigDataSender(appContext);
         button = (Button) app.findViewById(R.id.testButton);
         pigSearch = (EditText) app.findViewById(R.id.pigsearch);
         listview = (ListView) app.findViewById(R.id.listview1);
@@ -55,7 +53,7 @@ public class SubMainActivity extends AppCompatActivity {
         Pig pig1 = new Pig("0001", "John");
         Pig pig2 = new Pig("0002", "Alex");
         Pig pig3 = new Pig("0003", "Wine");
-        ArrayList<Pig> pigList = new ArrayList<>();
+        pigList = new ArrayList<>();
         pigList.add(pig1);
         pigList.add(pig2);
         pigList.add(pig3);
@@ -80,8 +78,7 @@ public class SubMainActivity extends AppCompatActivity {
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
-                pigSender.setName(pigArray[position]);
-                PageChange.toPigstyActivity(appContext);
+                PageChange.toPigstyActivity(appContext, pigList.get(position));
             }
         });
 
