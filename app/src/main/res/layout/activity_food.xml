@@ -130,7 +130,7 @@
 
                     <Button
                         android:id="@+id/viewfooddetail"
-                        android:layout_width="160dp"
+                        android:layout_width="200dp"
                         android:layout_height="50dp"
                         android:layout_below="@+id/textView14"
                         android:layout_centerHorizontal="true"

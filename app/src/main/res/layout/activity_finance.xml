@@ -11,34 +11,6 @@
         android:layout_height="567dp"
         tools:layout_editor_absoluteX="-14dp">
 
-        <Spinner
-            android:id="@+id/testspinner"
-            android:layout_width="100dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentTop="true"
-            android:layout_marginEnd="59dp"
-            android:layout_marginTop="106dp" />
-        <EditText
-            android:id="@+id/testvalue"
-            android:layout_width="100dp"
-            android:layout_height="50dp"
-            android:layout_alignParentTop="true"
-            android:layout_marginStart="25dp"
-            android:layout_marginTop="92dp"
-            android:layout_toEndOf="@+id/testbutton"
-            android:ems="10"
-            android:hint="pig search"
-            android:inputType="textPersonName" />
-
-        <Button
-            android:id="@+id/testbutton"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignTop="@+id/testvalue"
-            android:layout_marginStart="12dp"
-            android:text="Button" />
     </RelativeLayout>
 
 

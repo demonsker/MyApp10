@@ -10,17 +10,29 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
+        <Button
+            android:id="@+id/button5"
+            android:layout_width="400dp"
+            android:layout_height="30dp"
+            android:background="@android:color/darker_gray"
+            android:text="เลือกสุกรที่ต้องการขาย"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:layout_marginTop="30dp"
+            android:layout_below="@+id/button49"
+            android:layout_alignParentStart="true" />
+
         <TextView
             android:id="@+id/textView24"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignParentTop="true"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="16dp"
             android:text="การขายสุกร"
             android:textColor="@android:color/black"
             android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_alignParentTop="true"
-            android:layout_centerHorizontal="true" />
+            android:textStyle="bold" />
 
         <EditText
             android:id="@+id/editText"
@@ -57,12 +69,12 @@
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/editText"
             android:layout_alignStart="@+id/editText"
             android:layout_below="@+id/editText"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="จุฬาพรรณ  ไกยชาติ"
-            android:layout_alignEnd="@+id/editText" />
+            android:text="จุฬาพรรณ  ไกยชาติ" />
 
         <EditText
             android:id="@+id/editText5"
@@ -79,10 +91,11 @@
             android:id="@+id/spinner7"
             android:layout_width="120dp"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView34"
+            android:layout_alignStart="@+id/button49"
             android:layout_below="@+id/button55"
-            android:entries="@array/pigSelect"
-            android:layout_alignEnd="@+id/button52" />
+            android:layout_marginTop="12dp"
+            android:background="@android:color/holo_red_light"
+            android:entries="@array/pigSelect" />
 
         <Button
             android:id="@+id/button49"
@@ -93,7 +106,8 @@
             android:text="01001"
             android:textColor="@android:color/background_light"
             android:layout_below="@+id/spinner7"
-            android:layout_alignParentStart="true" />
+            android:layout_alignParentStart="true"
+            android:layout_marginTop="17dp" />
 
         <Button
             android:id="@+id/button52"
@@ -121,11 +135,11 @@
             android:id="@+id/button54"
             android:layout_width="70dp"
             android:layout_height="30dp"
+            android:layout_alignBottom="@+id/button53"
+            android:layout_alignEnd="@+id/editText6"
             android:background="@color/colorPrimary"
             android:text="01004"
-            android:textColor="@android:color/background_light"
-            android:layout_alignEnd="@+id/editText6"
-            android:layout_alignBottom="@+id/button53" />
+            android:textColor="@android:color/background_light" />
 
         <Button
             android:id="@+id/button55"
@@ -143,13 +157,13 @@
             android:id="@+id/textView34"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignStart="@+id/textView36"
-            android:layout_below="@+id/button49"
-            android:layout_marginTop="35dp"
+            android:layout_marginTop="27dp"
             android:text="รายได้ :"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp"
-            android:textStyle="bold" />
+            android:textStyle="bold"
+            android:layout_below="@+id/button5"
+            android:layout_alignStart="@+id/textView36" />
 
         <TextView
             android:id="@+id/textView36"
@@ -169,23 +183,23 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView34"
             android:layout_alignBottom="@+id/textView34"
+            android:layout_alignEnd="@+id/spinner8"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="36000 บาท"
-            android:textAlignment="center"
-            android:layout_alignEnd="@+id/spinner8" />
+            android:textAlignment="center" />
 
         <EditText
             android:id="@+id/editText7"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignEnd="@+id/spinner8"
             android:layout_alignStart="@+id/editText6"
             android:layout_below="@+id/editText6"
             android:ems="10"
             android:inputType="textPersonName"
             android:text="12000 บาท"
-            android:textAlignment="center"
-            android:layout_alignEnd="@+id/spinner8" />
+            android:textAlignment="center" />
 
         <TextView
             android:id="@+id/textView38"
@@ -210,14 +224,14 @@
             android:id="@+id/button56"
             android:layout_width="160dp"
             android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_alignStart="@+id/button49"
             android:layout_marginBottom="26dp"
             android:background="@color/colorPrimary"
             android:text="ขาย"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/button49" />
+            android:textStyle="bold" />
 
         <Button
             android:id="@+id/button57"
@@ -227,9 +241,9 @@
             android:text="ยกเลิก"
             android:textSize="18sp"
             android:textStyle="bold"
-            android:layout_alignBaseline="@+id/button56"
-            android:layout_alignBottom="@+id/button56"
-            android:layout_alignStart="@+id/button53" />
+            android:layout_alignTop="@+id/textView38"
+            android:layout_alignStart="@+id/button53"
+            android:layout_marginStart="18dp" />
 
         <TextView
             android:id="@+id/textView35"
@@ -260,12 +274,12 @@
             android:id="@+id/textView39"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBottom="@+id/imageView10"
+            android:layout_alignStart="@+id/textView35"
             android:text="เบอร์โทรลูกค้า :"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_alignBottom="@+id/imageView10"
-            android:layout_alignStart="@+id/textView35" />
+            android:textStyle="bold" />
 
     </RelativeLayout>
 

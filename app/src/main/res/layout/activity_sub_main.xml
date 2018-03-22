@@ -34,9 +34,9 @@
             android:id="@+id/testButton"
             android:layout_width="50dp"
             android:layout_height="50dp"
-            android:layout_alignBottom="@+id/pigsearch"
-            android:layout_marginEnd="14dp"
-            android:layout_toStartOf="@+id/pigsearch"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/floatingActionButton"
+            android:layout_marginEnd="16dp"
             android:text="S" />
 
     </RelativeLayout>
