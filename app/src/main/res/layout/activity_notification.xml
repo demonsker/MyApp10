@@ -18,13 +18,13 @@
                 android:id="@+id/textView20"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_below="@+id/linearLayout"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="15dp"
                 android:text="การแจ้งเตือน"
                 android:textColor="@android:color/black"
                 android:textSize="25sp"
-                android:textStyle="bold"
-                android:layout_below="@+id/linearLayout"
-                android:layout_centerHorizontal="true"
-                android:layout_marginTop="15dp" />
+                android:textStyle="bold" />
 
             <LinearLayout
                 android:id="@+id/linearLayout"
@@ -35,19 +35,19 @@
             <ImageView
                 android:id="@+id/imageView6"
                 android:layout_width="60dp"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/imageView8"
-                android:background="@android:color/background_light"
+                android:layout_alignTop="@+id/button7"
+                android:background="@android:color/darker_gray"
                 android:scaleType="fitCenter"
                 app:srcCompat="@mipmap/ic_vaccine" />
 
             <ImageView
                 android:id="@+id/imageView7"
                 android:layout_width="60dp"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:layout_alignParentStart="true"
-                android:layout_below="@+id/button7"
+                android:layout_below="@+id/button15"
                 android:background="@android:color/darker_gray"
                 android:scaleType="fitCenter"
                 app:srcCompat="@mipmap/ic_finance" />
@@ -55,9 +55,9 @@
             <ImageView
                 android:id="@+id/imageView8"
                 android:layout_width="60dp"
-                android:layout_height="45dp"
-                android:layout_above="@+id/button7"
+                android:layout_height="40dp"
                 android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/button8"
                 android:background="@android:color/darker_gray"
                 android:scaleType="fitCenter"
                 app:srcCompat="@mipmap/ic_food" />
@@ -65,42 +65,48 @@
             <Button
                 android:id="@+id/button8"
                 android:layout_width="300dp"
-                android:layout_height="45dp"
-                android:layout_marginTop="64dp"
+                android:layout_height="40dp"
+                android:layout_alignParentEnd="true"
+                android:layout_below="@+id/textView20"
+                android:layout_marginTop="18dp"
+                android:layout_toEndOf="@+id/imageView8"
                 android:background="@android:color/darker_gray"
                 android:backgroundTint="@android:color/darker_gray"
                 android:text="     แจ้งเตือนอาหาร"
                 android:textAlignment="viewStart"
+                android:textColor="@android:color/background_light"
                 android:textSize="14sp"
-                android:layout_below="@+id/linearLayout"
-                android:layout_alignParentEnd="true"
-                android:layout_toEndOf="@+id/imageView6" />
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button6"
                 android:layout_width="300dp"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/button7"
-                android:layout_toEndOf="@+id/imageView6"
-                android:background="@android:color/background_light"
+                android:background="@android:color/darker_gray"
                 android:backgroundTint="@android:color/darker_gray"
                 android:text="     แจ้งเตือนการขาย"
                 android:textAlignment="viewStart"
-                android:textSize="14sp" />
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button7"
                 android:layout_width="300dp"
-                android:layout_height="45dp"
+                android:layout_height="40dp"
                 android:layout_alignParentEnd="true"
                 android:layout_below="@+id/button8"
+                android:layout_marginTop="11dp"
                 android:layout_toEndOf="@+id/imageView6"
-                android:background="@android:color/background_light"
-                android:backgroundTint="@android:color/background_light"
+                android:background="@android:color/darker_gray"
+                android:backgroundTint="@android:color/darker_gray"
                 android:text="     แจ้งเตือนการพยาบาล"
                 android:textAlignment="viewStart"
-                android:textSize="14sp" />
+                android:textColor="@android:color/background_light"
+                android:textSize="14sp"
+                android:textStyle="bold" />
 
             <Button
                 android:id="@+id/button10"
@@ -111,18 +117,19 @@
                 android:background="@mipmap/ic_noti2"
                 android:text="2"
                 android:textColor="@android:color/background_light"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/button15"
                 android:layout_width="20dp"
                 android:layout_height="20dp"
-                android:layout_below="@+id/imageView6"
-                android:layout_toStartOf="@+id/button6"
+                android:layout_alignBaseline="@+id/button10"
+                android:layout_alignBottom="@+id/button10"
+                android:layout_toEndOf="@+id/imageView6"
                 android:background="@mipmap/ic_noti2"
                 android:text="2"
                 android:textColor="@android:color/background_light"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/button20"
@@ -133,36 +140,35 @@
                 android:background="@mipmap/ic_noti2"
                 android:text="1"
                 android:textColor="@android:color/background_light"
-                android:visibility="gone" />
-
-            <Button
-                android:id="@+id/button19"
-                android:layout_width="320dp"
-                android:layout_height="30dp"
-                android:layout_alignParentStart="true"
-                android:layout_below="@+id/imageView7"
-                android:layout_toStartOf="@+id/button21"
-                android:background="@color/colorPrimaryDark"
-                android:backgroundTint="@color/colorPrimaryDark"
-                android:text="  การแจ้งเตือนทั้งหมด                                         "
-                android:textAlignment="viewStart"
-                android:textColor="@android:color/background_light"
-                android:textStyle="bold"
-                android:layout_alignParentEnd="true" />
+                android:visibility="visible" />
 
             <Button
                 android:id="@+id/button21"
                 android:layout_width="150dp"
                 android:layout_height="30dp"
+                android:layout_alignParentBottom="true"
                 android:layout_alignParentEnd="true"
-                android:layout_below="@+id/button6"
-                android:background="@color/colorPrimaryDark"
+                android:background="@android:color/darker_gray"
                 android:text="ยังไม่ได้อ่าน(5)"
                 android:textColor="@android:color/holo_red_light"
                 android:textStyle="bold"
-                android:visibility="gone" />
+                android:visibility="visible" />
 
         </RelativeLayout>
+
+        <Button
+            android:id="@+id/button19"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/imageView7"
+            android:layout_marginTop="12dp"
+            android:background="@android:color/darker_gray"
+            android:backgroundTint="@android:color/darker_gray"
+            android:text="การแจ้งเตือนทั้งหมด                                         "
+            android:textAlignment="center"
+            android:textColor="@android:color/background_dark"
+            android:textStyle="bold" />
     </ScrollView>
 
 </android.support.design.widget.CoordinatorLayout>

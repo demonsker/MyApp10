@@ -10,8 +10,6 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
 import android.widget.Toast;
 
@@ -141,6 +139,8 @@ public class MainActivity extends AppCompatActivity
             FoodActivity.addController(this);
         else if(activity == R.layout.activity_finance)
             FinanceActivity.addController(this);
+        else if(activity == R.layout.activity_environment)
+            EnvironmentActivity.addController(this);
     }
 
 }

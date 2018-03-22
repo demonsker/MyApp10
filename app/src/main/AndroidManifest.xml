@@ -50,7 +50,7 @@
             android:label="@string/title_activity_notification"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".cleaningActivity"
+            android:name=".CleaningActivity"
             android:label="@string/title_activity_cleaning"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
