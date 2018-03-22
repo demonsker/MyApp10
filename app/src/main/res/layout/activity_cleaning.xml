@@ -7,89 +7,76 @@
     tools:context="com.example.happypig.myapplication.cleaningActivity">
 
     <RelativeLayout
-        android:id="@+id/relativeLayout"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:layout_below="@+id/button2">
 
-        <android.support.v7.widget.Toolbar
-            android:id="@+id/toolbar12"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true"
-            android:background="#39000000"
-            android:minHeight="?attr/actionBarSize"
-            android:theme="?attr/actionBarTheme" />
-
-        <RelativeLayout
-            android:id="@+id/relativeLayout5"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentTop="true">
-
-            <Button
-                android:id="@+id/button2"
-                android:layout_width="193dp"
-                android:layout_height="60dp"
-                android:layout_alignParentEnd="true"
-                android:layout_alignTop="@+id/relativeLayout2"
-                android:background="#FF01B9AE"
-                android:backgroundTint="#FF01B9AE"
-                android:text="ความสะอาด"
-                android:textColor="@android:color/black"
-                android:textSize="18sp" />
-
-            <Button
-                android:id="@+id/button3"
-                android:layout_width="193dp"
-                android:layout_height="60dp"
-                android:layout_alignParentStart="true"
-                android:layout_alignParentTop="true"
-                android:background="#FB01534F"
-                android:backgroundTint="#FB01534F"
-                android:text="อุณหภูมิ"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp" />
-
-            <RelativeLayout
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-                android:layout_below="@+id/button2">
-
-            </RelativeLayout>
-
-            <Button
-                android:id="@+id/button4"
-                android:layout_width="160dp"
-                android:layout_height="50dp"
-                android:background="@color/colorPrimary"
-                android:backgroundTint="@color/colorPrimary"
-                android:text="ทำความสะอาด"
-                android:textColor="@android:color/background_light"
-                android:textSize="18sp"
-                android:layout_centerVertical="true"
-                android:layout_centerHorizontal="true" />
-        </RelativeLayout>
+        <Spinner
+            android:id="@+id/spinner"
+            android:layout_width="150dp"
+            android:layout_height="25dp"
+            android:layout_alignEnd="@+id/textView57"
+            android:layout_alignTop="@+id/textView2" />
 
         <TextView
             android:id="@+id/textView2"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignTop="@+id/relativeLayout5"
-            android:layout_marginTop="85dp"
-            android:layout_toStartOf="@+id/spinner"
             android:text="เลือกโรงเรือน :"
             android:textColor="@android:color/black"
+            android:textSize="18sp"
+            android:layout_above="@+id/button4"
+            android:layout_toStartOf="@+id/spinner"
+            android:layout_marginBottom="42dp" />
+
+        <Button
+            android:id="@+id/button4"
+            android:layout_width="160dp"
+            android:layout_height="45dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:background="@color/colorPrimary"
+            android:backgroundTint="@color/colorPrimary"
+            android:text="ทำความสะอาด"
+            android:textColor="@android:color/background_light"
             android:textSize="18sp" />
 
-        <Spinner
-            android:id="@+id/spinner"
-            android:layout_width="150dp"
+        <TextView
+            android:id="@+id/textView57"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="62dp"
-            android:layout_alignTop="@+id/textView2"
-            android:layout_alignParentEnd="true" />
+            android:layout_alignTop="@+id/relativeLayout2"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="38dp"
+            android:text="การควบคุมสภาพแวดล้อม"
+            android:textColor="@android:color/black"
+            android:textSize="25sp"
+            android:textStyle="bold" />
 
+        <Button
+            android:id="@+id/button30"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_alignTop="@+id/button31"
+            android:background="@color/colorPrimaryDark"
+            android:text="ทำความสะอาด"
+            android:textColor="@android:color/background_light"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/button31"
+            android:layout_width="192dp"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/textView57"
+            android:layout_marginTop="25dp"
+            android:background="@android:color/darker_gray"
+            android:text="ตั้งค่าอุณหภูมิ"
+            android:textColor="@android:color/background_dark"
+            android:textSize="18sp"
+            android:textStyle="bold" />
     </RelativeLayout>
+
 </android.support.design.widget.CoordinatorLayout>
