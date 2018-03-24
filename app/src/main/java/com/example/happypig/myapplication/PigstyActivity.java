@@ -21,8 +21,8 @@ public class PigstyActivity extends AppCompatActivity {
 
         //pigName = (Button) findViewById(R.id.pigname);
 
-        Pig pig = (Pig)(getIntent().getSerializableExtra("Pig"));
-        pigName.setText("ชื่อ : "+pig.getName());
+       // Pig pig = (Pig)(getIntent().getSerializableExtra("Pig"));
+        //pigName.setText("ชื่อ : "+pig.getName());
     }
 
 }
