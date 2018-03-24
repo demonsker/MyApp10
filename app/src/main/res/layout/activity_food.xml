@@ -40,8 +40,8 @@
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
                         android:layout_below="@+id/foodbalanceimage"
-                        android:layout_marginStart="50dp"
-                        android:layout_marginTop="26dp"
+                        android:layout_marginStart="33dp"
+                        android:layout_marginTop="29dp"
                         android:text="เลือกโรงเรือน :"
                         android:textColor="@android:color/black"
                         android:textSize="18sp"
@@ -51,8 +51,9 @@
                         android:id="@+id/spinner3"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
-                        android:layout_alignEnd="@+id/textView15"
-                        android:layout_alignTop="@+id/textView12"
+                        android:layout_alignBaseline="@+id/textView12"
+                        android:layout_alignBottom="@+id/textView12"
+                        android:layout_alignStart="@+id/textView15"
                         android:entries="@array/foodInformation" />
 
                     <ImageView
@@ -92,19 +93,22 @@
                         android:id="@+id/spinner4"
                         android:layout_width="80dp"
                         android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView11"
+                        android:layout_alignBottom="@+id/textView11"
                         android:layout_alignEnd="@+id/textView15"
-                        android:layout_alignTop="@+id/textView11"
                         android:entries="@array/foodInformation" />
 
                     <TextView
                         android:id="@+id/textView13"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
+                        android:layout_alignBaseline="@+id/textView10"
+                        android:layout_alignBottom="@+id/textView10"
+                        android:layout_marginStart="36dp"
+                        android:layout_toEndOf="@+id/textView14"
                         android:text="100 กิโลกรัม"
                         android:textColor="@android:color/black"
-                        android:textSize="18sp"
-                        android:layout_above="@+id/textView14"
-                        android:layout_toEndOf="@+id/textView14" />
+                        android:textSize="18sp" />
 
                     <TextView
                         android:id="@+id/textView14"

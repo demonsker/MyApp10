@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.happypig.myapplication.cleaningActivity">
+    tools:context="com.example.happypig.myapplication.CleaningActivity">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -12,7 +12,7 @@
         android:layout_below="@+id/button2">
 
         <Spinner
-            android:id="@+id/spinner"
+            android:id="@+id/buildspinner"
             android:layout_width="150dp"
             android:layout_height="25dp"
             android:layout_alignEnd="@+id/textView57"
@@ -25,12 +25,12 @@
             android:text="เลือกโรงเรือน :"
             android:textColor="@android:color/black"
             android:textSize="18sp"
-            android:layout_above="@+id/button4"
-            android:layout_toStartOf="@+id/spinner"
+            android:layout_above="@+id/cleanbutton"
+            android:layout_toStartOf="@+id/buildspinner"
             android:layout_marginBottom="42dp" />
 
         <Button
-            android:id="@+id/button4"
+            android:id="@+id/cleanbutton"
             android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_centerHorizontal="true"
@@ -58,7 +58,7 @@
             android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
-            android:layout_alignTop="@+id/button31"
+            android:layout_alignTop="@+id/totempbutton"
             android:background="@color/colorPrimaryDark"
             android:text="ทำความสะอาด"
             android:textColor="@android:color/background_light"
@@ -66,7 +66,7 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button31"
+            android:id="@+id/totempbutton"
             android:layout_width="192dp"
             android:layout_height="wrap_content"
             android:layout_alignParentStart="true"

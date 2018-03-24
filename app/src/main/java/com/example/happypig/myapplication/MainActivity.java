@@ -10,14 +10,15 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.happypig.myapplication.Utilities.PageChange;
 import com.example.happypig.myapplication.Utilities.Session;
 import com.example.happypig.myapplication.Utilities.Action;
+
+import java.util.Random;
 
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
@@ -52,7 +53,7 @@ public class MainActivity extends AppCompatActivity
 
         exit = 1;
 
-        changTab(R.layout.activity_sub_main,layout);
+        changeTab(R.layout.activity_sub_main,layout);
 
     }
 
@@ -100,25 +101,25 @@ public class MainActivity extends AppCompatActivity
         int id = item.getItemId();
 
         if (id == R.id.nav_home) {
-            changTab(R.layout.activity_sub_main,layout);
+            changeTab(R.layout.activity_sub_main,layout);
 
         } else if (id == R.id.nav_sale) {
-            changTab(R.layout.activity_sale,layout);
+            changeTab(R.layout.activity_sale,layout);
 
         } else if (id == R.id.nav_food) {
-            changTab(R.layout.activity_food,layout);
+            changeTab(R.layout.activity_food,layout);
 
         } else if (id == R.id.nav_environment) {
-            changTab(R.layout.activity_environment,layout);
+            changeTab(R.layout.activity_environment,layout);
 
         } else if (id == R.id.nav_finance) {
-            changTab(R.layout.activity_finance,layout);
+            changeTab(R.layout.activity_finance,layout);
 
         } else if (id == R.id.nav_report) {
-            changTab(R.layout.activity_report,layout);
+            changeTab(R.layout.activity_report,layout);
 
         } else if (id == R.id.nav_notification) {
-            changTab(R.layout.activity_notification,layout);
+            changeTab(R.layout.activity_notification,layout);
 
         }
         else if (id == R.id.nav_logout) {
@@ -131,7 +132,7 @@ public class MainActivity extends AppCompatActivity
         return true;
     }
 
-    public void changTab(int activity, RelativeLayout layout){
+    public void changeTab(int activity, RelativeLayout layout){
         layout.removeAllViews();
         View content = getLayoutInflater().inflate(activity, layout, false);
         layout.addView(content);
@@ -141,6 +142,54 @@ public class MainActivity extends AppCompatActivity
             FoodActivity.addController(this);
         else if(activity == R.layout.activity_finance)
             FinanceActivity.addController(this);
+        else if(activity == R.layout.activity_environment) {
+            EnvironmentActivity.addController(this);
+            final TextView tempLabel = (TextView) findViewById(R.id.templabel);;
+
+            final Random rand = new Random();
+            (new Thread(new Runnable()
+            {
+                int count = 25;
+                int status = 0;
+                @Override
+                public void run()
+                {
+                    tempLabel.setText("25 องศาเซลเซียส");
+                    try {Thread.sleep(2000);}
+                    catch(Exception e) {}
+
+                    while (!Thread.interrupted())
+                        try
+                        {
+                            runOnUiThread(new Runnable() // start actions in UI thread
+                            {
+                                @Override
+                                public void run(){
+                                    if(status == 0 && count <= 20) {
+                                        status = 1;
+                                        try {Thread.sleep(2000);}
+                                        catch(Exception e) {}
+                                    }
+                                    int val = (rand.nextInt(1) + 1);
+                                    count = (status == 0)? count-val : count+val;
+
+                                    tempLabel.setText(count + " องศาเซลเซียส");
+                                    if(count >= 24)
+                                        try {Thread.sleep(2000);}
+                                        catch(Exception e) {}
+
+                                }
+                            });
+                            Thread.sleep(1500);
+                        }
+                        catch (InterruptedException e)
+                        {
+                            // ooops
+                        }
+                }
+            })).start();
+        }
+
     }
 
 }

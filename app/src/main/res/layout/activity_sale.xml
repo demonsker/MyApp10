@@ -54,17 +54,6 @@
             android:layout_alignTop="@+id/editText"
             app:srcCompat="@mipmap/ic_phonebook" />
 
-        <Button
-            android:id="@+id/button14"
-            android:layout_width="wrap_content"
-            android:layout_height="45dp"
-            android:layout_alignStart="@+id/editText"
-            android:layout_below="@+id/editText"
-            android:layout_marginStart="88dp"
-            android:layout_marginTop="20dp"
-            android:text="Button"
-            android:visibility="invisible" />
-
         <EditText
             android:id="@+id/editText2"
             android:layout_width="wrap_content"
@@ -94,7 +83,7 @@
             android:layout_alignStart="@+id/button49"
             android:layout_below="@+id/button55"
             android:layout_marginTop="12dp"
-            android:background="@android:color/holo_red_light"
+            android:background="@android:color/darker_gray"
             android:entries="@array/pigSelect" />
 
         <Button
@@ -224,9 +213,8 @@
             android:id="@+id/button56"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_alignParentBottom="true"
-            android:layout_alignStart="@+id/button49"
-            android:layout_marginBottom="26dp"
+            android:layout_alignTop="@+id/spinner8"
+            android:layout_toStartOf="@+id/button57"
             android:background="@color/colorPrimary"
             android:text="ขาย"
             android:textColor="@android:color/background_light"
@@ -251,7 +239,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/editText2"
             android:layout_alignBottom="@+id/editText2"
-            android:layout_alignStart="@+id/textView37"
+            android:layout_alignStart="@+id/textView39"
             android:lineSpacingExtra="18sp"
             android:text="ชื่อลูกค้า :"
             android:textColor="@android:color/background_dark"
@@ -264,7 +252,7 @@
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/editText5"
             android:layout_alignBottom="@+id/editText5"
-            android:layout_alignStart="@+id/spinner7"
+            android:layout_alignStart="@+id/textView35"
             android:text="ราคา/กก. :"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp"
@@ -274,8 +262,9 @@
             android:id="@+id/textView39"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_alignBottom="@+id/imageView10"
-            android:layout_alignStart="@+id/textView35"
+            android:layout_alignBaseline="@+id/editText"
+            android:layout_alignBottom="@+id/editText"
+            android:layout_alignStart="@+id/textView34"
             android:text="เบอร์โทรลูกค้า :"
             android:textColor="@android:color/background_dark"
             android:textSize="18sp"

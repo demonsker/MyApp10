@@ -29,14 +29,14 @@ public class FinanceActivity extends AppCompatActivity {
     }
 
     private static void mapLayout(AppCompatActivity app){
-        appContext = app;
+      /*  appContext = app;
         testValue = (EditText) app.findViewById(R.id.testvalue);
         testButton = (Button) app.findViewById(R.id.testbutton);
-        testSpinner = (Spinner) app.findViewById(R.id.testspinner);
+        testSpinner = (Spinner) app.findViewById(R.id.testspinner);*/
     }
 
     static void addController(AppCompatActivity app){
-        mapLayout(app);
+     /*   mapLayout(app);
 
         testButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
@@ -45,7 +45,7 @@ public class FinanceActivity extends AppCompatActivity {
                 for(int i = 1; i <= size; i++)
                     arrayList.add(i);
 
-                ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer> (appContext, R.layout.test_spinner_list, R.id.testtextview, arrayList);
+                ArrayAdapter<Integer> adapter = new ArrayAdapter<Integer> (appContext, R.layout.build_spinner_list, R.id.testtextview, arrayList);
                 testSpinner.setAdapter(adapter);
 
                 testSpinner.setVisibility(View.VISIBLE);
@@ -65,6 +65,6 @@ public class FinanceActivity extends AppCompatActivity {
 
                 });
             }
-        });
+        });*/
     }
 }

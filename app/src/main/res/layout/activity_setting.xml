@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.happypig.myapplication.cleaningActivity">
+    tools:context="com.example.happypig.myapplication.CleaningActivity">
 
     <ScrollView
         android:layout_width="match_parent"
@@ -154,7 +154,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignStart="@+id/textView60"
                     android:layout_below="@+id/editText14"
-                    android:layout_marginTop="11dp"
+                    android:layout_marginTop="14dp"
                     android:text="โรงเรือนที่ "
                     android:textColor="@android:color/background_dark"
                     android:textSize="16sp" />
@@ -200,7 +200,7 @@
                     android:layout_height="45dp"
                     android:layout_below="@+id/editText15"
                     android:layout_centerHorizontal="true"
-                    android:layout_marginTop="16dp"
+                    android:layout_marginTop="17dp"
                     android:background="@color/colorPrimaryDark"
                     android:text="เปลี่ยนแปลการตั้งค่า"
                     android:textColor="@android:color/background_light"

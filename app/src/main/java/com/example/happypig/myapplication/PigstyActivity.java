@@ -19,7 +19,7 @@ public class PigstyActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
-        pigName = (Button) findViewById(R.id.pigname);
+        //pigName = (Button) findViewById(R.id.pigname);
 
         Pig pig = (Pig)(getIntent().getSerializableExtra("Pig"));
         pigName.setText("ชื่อ : "+pig.getName());
