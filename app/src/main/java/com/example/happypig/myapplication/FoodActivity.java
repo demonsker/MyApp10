@@ -15,11 +15,13 @@ import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.ImageView;
+import android.widget.TextView;
 
 public class FoodActivity extends AppCompatActivity {
 
     static ImageView foodBalanceImage;
     static Button viewfoodDetail;
+    static TextView foodBalanceInput;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -33,6 +35,7 @@ public class FoodActivity extends AppCompatActivity {
     private static void mapLayout(AppCompatActivity app){
         foodBalanceImage = (ImageView) app.findViewById(R.id.foodbalanceimage);
         viewfoodDetail = (Button) app.findViewById(R.id.viewfooddetail);
+        foodBalanceInput = (TextView) app.findViewById(R.id.foodbalanceinput);
     }
 
     static void addController(AppCompatActivity app){
@@ -40,9 +43,26 @@ public class FoodActivity extends AppCompatActivity {
 
         viewfoodDetail.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                foodBalanceImage.setImageResource(R.mipmap.ic_food_full);
+
+                int balance = Integer.parseInt(foodBalanceInput.getText().toString());
+
+                if(balance > 80)
+                    foodBalanceImage.setImageResource(R.mipmap.ic_food_full);
+
+                else if(balance > 51)
+                    foodBalanceImage.setImageResource(R.mipmap.ic_food_under_full);
+
+                else if(balance > 21)
+                    foodBalanceImage.setImageResource(R.mipmap.ic_food_mor_empty);
+
+                else
+                    foodBalanceImage.setImageResource(R.mipmap.ic_food_empty);
+
+
             }
         });
+
+
     }
 }
 
