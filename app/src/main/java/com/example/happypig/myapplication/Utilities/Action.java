@@ -29,6 +29,16 @@ public class Action {
         return handler.login(params);
     }
 
+    public static int setTemperature(AppCompatActivity app, double min, double max){
+        List<NameValuePair> params = new ArrayList<NameValuePair>();
+
+        params.add(new BasicNameValuePair("min", min+""));
+        params.add(new BasicNameValuePair("max", max+""));
+        params.add(new BasicNameValuePair("farmid", new Session(app).getId()));
+
+        return handler.updateBuild(params);
+    }
+
     public static int register(Farm farm){
         List<NameValuePair> params = new ArrayList<NameValuePair>();
 

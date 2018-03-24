@@ -24,16 +24,16 @@
             android:layout_centerHorizontal="true" />
 
         <TextView
-            android:id="@+id/textView16"
+            android:id="@+id/templabel"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/textView8"
+            android:layout_alignBottom="@+id/textView8"
+            android:layout_alignStart="@+id/spinner2"
             android:text="30 องศาเซลเซียส"
             android:textColor="@android:color/holo_green_dark"
             android:textSize="18sp"
-            android:textStyle="bold"
-            android:layout_alignBaseline="@+id/textView8"
-            android:layout_alignBottom="@+id/textView8"
-            android:layout_alignStart="@+id/spinner2" />
+            android:textStyle="bold" />
 
         <TextView
             android:id="@+id/textView5"
@@ -120,7 +120,7 @@
             android:layout_alignStart="@+id/textView8" />
 
         <Button
-            android:id="@+id/setTemp_Button"
+            android:id="@+id/tosettempbutton"
             android:layout_width="160dp"
             android:layout_height="45dp"
             android:layout_below="@+id/tempMin_textViwe"
@@ -150,7 +150,7 @@
             android:layout_alignBaseline="@+id/tempMin_textViwe"
             android:layout_alignBottom="@+id/tempMin_textViwe"
             android:layout_alignEnd="@+id/spinner2"
-            android:text="18 องศสเซลเซียส"
+            android:text="24 องศสเซลเซียส"
             android:textColor="@android:color/holo_blue_light"
             android:textSize="18sp"
             android:textStyle="bold" />
@@ -162,7 +162,7 @@
             android:layout_alignBaseline="@+id/tempMax_textViwe"
             android:layout_alignBottom="@+id/tempMax_textViwe"
             android:layout_alignStart="@+id/textView18"
-            android:text="39 องศสเซลเซียส"
+            android:text="30 องศสเซลเซียส"
             android:textColor="@android:color/holo_red_dark"
             android:textSize="18sp"
             android:textStyle="bold" />

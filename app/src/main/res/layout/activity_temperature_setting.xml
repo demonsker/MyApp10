@@ -25,9 +25,9 @@
             android:id="@+id/button17"
             android:layout_width="160dp"
             android:layout_height="50dp"
-            android:layout_alignBaseline="@+id/button13"
-            android:layout_alignBottom="@+id/button13"
-            android:layout_alignEnd="@+id/editText11"
+            android:layout_alignBaseline="@+id/settempbutton"
+            android:layout_alignBottom="@+id/settempbutton"
+            android:layout_alignEnd="@+id/mintemp"
             android:background="#828282"
             android:backgroundTint="#828282"
             android:onClick="gotoRegisterClick"
@@ -37,14 +37,13 @@
             android:textStyle="bold" />
 
         <Button
-            android:id="@+id/button13"
+            android:id="@+id/settempbutton"
             android:layout_width="160dp"
             android:layout_height="50dp"
             android:layout_alignStart="@+id/textView40"
             android:layout_centerVertical="true"
             android:background="#024d4a"
             android:backgroundTint="#024d4a"
-            android:onClick="loginClick"
             android:text="ตั้งค่า"
             android:textColor="@android:color/background_light"
             android:textSize="18sp"
@@ -115,18 +114,18 @@
             android:textStyle="bold" />
 
         <EditText
-            android:id="@+id/editText11"
+            android:id="@+id/mintemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView40"
             android:layout_alignBottom="@+id/textView40"
-            android:layout_alignStart="@+id/editText12"
+            android:layout_alignStart="@+id/maxtemp"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="องศาเซลเซียส" />
+            android:hint="องศาเซลเซียส" />
 
         <EditText
-            android:id="@+id/editText12"
+            android:id="@+id/maxtemp"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignBaseline="@+id/textView33"
@@ -135,7 +134,7 @@
             android:layout_toEndOf="@+id/textView40"
             android:ems="10"
             android:inputType="textPersonName"
-            android:text="องศาเซลเซียส" />
+            android:hint="องศาเซลเซียส" />
 
     </RelativeLayout>
 

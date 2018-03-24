@@ -44,7 +44,7 @@ public class CleaningActivity extends AppCompatActivity {
 
         toTempButton.setOnClickListener(new Button.OnClickListener() {
             public void onClick(View v) {
-                appContext.changTab(R.layout.activity_environment, appContext.layout);
+                appContext.changeTab(R.layout.activity_environment, appContext.layout);
                 EnvironmentActivity.addController(appContext);
             }
         });
