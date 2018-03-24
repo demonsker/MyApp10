@@ -10,6 +10,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -122,6 +124,9 @@ public class MainActivity extends AppCompatActivity
             changeTab(R.layout.activity_notification,layout);
 
         }
+        else if (id == R.id.nav_Setting) {
+            changeTab(R.layout.activity_setting,layout);
+        }
         else if (id == R.id.nav_logout) {
             session.clear();
             PageChange.toLoginActivity(this);
@@ -138,15 +143,63 @@ public class MainActivity extends AppCompatActivity
         layout.addView(content);
         if(activity == R.layout.activity_sub_main)
             SubMainActivity.addController(this);
-        else if(activity == R.layout.activity_food)
+        else if(activity == R.layout.activity_food) {
             FoodActivity.addController(this);
+
+          /*  final TextView foodBalance = (TextView) findViewById(R.id.foodbalance);
+            final ImageView foodBalanceImage = (ImageView) findViewById(R.id.foodbalanceimage);
+            final Button viewfoodDetail  = (Button) findViewById(R.id.viewfooddetail);
+
+            (new Thread(new Runnable()
+            {
+                int count = 100;
+                @Override
+                public void run()
+                {
+                    foodBalanceImage.setImageResource(R.mipmap.ic_food_full);
+                    try {Thread.sleep(2000);}
+                    catch(Exception e) {}
+
+                    while (!Thread.interrupted())
+                        try
+                        {
+                            runOnUiThread(new Runnable() // start actions in UI thread
+                            {
+                                @Override
+                                public void run(){
+
+                               if(count == 100)
+                                   count = 80;
+                               else if(count == 80) {
+                                   foodBalanceImage.setImageResource(R.mipmap.ic_food_under_full);
+                                   count = 50;
+                               }
+                               else if(count == 50) {
+                                   foodBalanceImage.setImageResource(R.mipmap.ic_food_mor_empty);
+                                   count = 20;
+                               }
+                               else if(count == 20)
+                                   foodBalanceImage.setImageResource(R.mipmap.ic_food_empty);
+
+                               foodBalance.setText(count + " กิโลกรัม");
+                                }
+                            });
+                            Thread.sleep(3000);
+                        }
+                        catch (InterruptedException e)
+                        {
+                            // ooops
+                        }
+                }
+            })).start();*/
+        }
         else if(activity == R.layout.activity_finance)
             FinanceActivity.addController(this);
         else if(activity == R.layout.activity_environment) {
             EnvironmentActivity.addController(this);
             final TextView tempLabel = (TextView) findViewById(R.id.templabel);;
 
-            final Random rand = new Random();
+        /*    final Random rand = new Random();
             (new Thread(new Runnable()
             {
                 int count = 25;
@@ -187,9 +240,11 @@ public class MainActivity extends AppCompatActivity
                             // ooops
                         }
                 }
-            })).start();
+            })).start();*/
         }
-
+        if(activity == R.layout.activity_setting) {
+            //SubMainActivity.addController(this);
+        }
     }
 
 }

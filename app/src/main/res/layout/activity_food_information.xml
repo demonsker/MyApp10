@@ -96,7 +96,7 @@
                     android:textStyle="bold" />
 
                 <TextView
-                    android:id="@+id/textView13"
+                    android:id="@+id/foodbalance"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_above="@+id/textView14"
@@ -124,7 +124,7 @@
                     android:layout_height="wrap_content"
                     android:layout_alignBaseline="@+id/textView14"
                     android:layout_alignBottom="@+id/textView14"
-                    android:layout_alignStart="@+id/textView13"
+                    android:layout_alignStart="@+id/foodbalance"
                     android:text="25 มกราคม"
                     android:textColor="@android:color/black"
                     android:textSize="18sp" />
@@ -133,7 +133,7 @@
                     android:id="@+id/textView64"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignStart="@+id/textView13"
+                    android:layout_alignStart="@+id/foodbalance"
                     android:layout_alignTop="@+id/textView12"
                     android:text="1"
                     android:textColor="@android:color/black"
