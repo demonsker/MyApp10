@@ -53,13 +53,13 @@ public class SubMainActivity extends AppCompatActivity {
     static void addController(MainActivity app){
         mapLayout(app);
 
-       /* Pig pig1 = new Pig("0001", "John");
+        Pig pig1 = new Pig("0001", "John");
         Pig pig2 = new Pig("0002", "Alex");
         Pig pig3 = new Pig("0003", "Wine");
         pigList = new ArrayList<>();
         pigList.add(pig1);
         pigList.add(pig2);
-        pigList.add(pig3);*/
+        pigList.add(pig3);
 
         pigArray = new String[5];
         pigArray[0] = "กรง : 1\nอายุ : 20 วัน \nน้ำหนัก 50 : กิโลกรัม";
@@ -85,7 +85,7 @@ public class SubMainActivity extends AppCompatActivity {
                 listview.setAdapter(arrayAdapter);
             }
         });
-
+*/
         listview.setOnItemClickListener(new AdapterView.OnItemClickListener() {
             @Override
             public void onItemClick(AdapterView<?> arg0, View arg1, int position, long arg3) {
@@ -93,7 +93,7 @@ public class SubMainActivity extends AppCompatActivity {
             }
         });
 
-*/
+
 
      /*   pigSearch.setOnKeyListener(new View.OnKeyListener() {
             public boolean onKey(View v, int keyCode, KeyEvent event) {
